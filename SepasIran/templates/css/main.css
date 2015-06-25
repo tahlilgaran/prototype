@@ -4,6 +4,11 @@
 
 header{
 	font-size: 50px;
+	border-bottom: 3px solid #eee;
+}
+
+body{
+	margin-bottom: 40px;
 }
 
 .finish_nav{
@@ -14,7 +19,11 @@ header{
   position: absolute;
   bottom: 0;
   width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
+   /*Set the fixed height of the footer here */
+  height: 40px;
   background-color: #f5f5f5;
+}
+
+.picture{
+	height: 350px;
 }
