@@ -5,10 +5,11 @@
 header{
 	font-size: 50px;
 	border-bottom: 3px solid #eee;
+	margin-bottom: 5px;
 }
 
 body{
-	margin-bottom: 40px;
+	margin-bottom: 140px;
 }
 
 .finish_nav{
@@ -26,4 +27,13 @@ body{
 
 .picture{
 	height: 350px;
+}
+
+.right_aside{
+	float: right;
+	margin-top: 0px;
+}
+
+.null_for_end{
+	height: 100px;
 }
