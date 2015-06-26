@@ -32,6 +32,7 @@ body{
 .right_aside{
 	float: right;
 	margin-top: 0px;
+	position: fixed;
 }
 
 .null_for_end{
