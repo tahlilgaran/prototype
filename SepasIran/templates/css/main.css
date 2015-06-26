@@ -3,17 +3,23 @@
 }
 
 header{
-	font-size: 50px;
 	border-bottom: 3px solid #eee;
 	margin-bottom: 5px;
 }
 
+header .login_box{
+	border-right: 3px solid #eee;
+}
 body{
 	margin-bottom: 140px;
 }
 
 .finish_nav{
 	margin-top: 50px;
+}
+
+.nav_img{
+	height: 50px;
 }
 
 .footer{
