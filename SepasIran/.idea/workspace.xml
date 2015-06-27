@@ -37,7 +37,7 @@
         <entry file="file://$PROJECT_DIR$/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.59210527" vertical-offset="0" max-vertical-offset="1905">
-              <caret line="18" column="108" selection-start-line="18" selection-start-column="108" selection-end-line="18" selection-end-column="108" />
+              <caret line="18" column="107" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="107" />
               <folding />
             </state>
           </provider>
@@ -459,7 +459,7 @@
     <entry file="file://$PROJECT_DIR$/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.59210527" vertical-offset="0" max-vertical-offset="1905">
-          <caret line="18" column="108" selection-start-line="18" selection-start-column="108" selection-end-line="18" selection-end-column="108" />
+          <caret line="18" column="107" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="107" />
           <folding />
         </state>
       </provider>
