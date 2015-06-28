@@ -1,3 +1,33 @@
+@font-face {
+    font-family: 'Droid Arabic Naskh';
+    src: url('../fonts/Droid_Arabic_Naskh/DroidNaskh.eot') format('eot'),
+        url('../fonts/Droid_Arabic_Naskh/DroidNaskh.woff') format('woff'),
+        url('../fonts/Droid_Arabic_Naskh/DroidNaskh.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'B Yekan';
+    src: url('../fonts/BYekan/BYekan.eot') format('eot'),
+        url('../fonts/BYekan/BYekan.woff') format('woff'),
+        url('../fonts/BYekan/BYekan.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'B Mitra';
+    src:url('../fonts/BMitra/BMitra.eot') format('eot'),
+        url('../fonts/BMitra/BMitra.woff') format('woff'),
+        url('../fonts/BMitra/BMitra.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'B Mitra bold';
+    src: url('../fonts/BMitra/BMitraBold.eot') format('eot'),
+        url('../fonts/BMitra/BMitraBold.woff') format('woff'),
+        url('../fonts/BMitra/BMitraBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rezvan-fat';
+    src:url('../fonts/Rezvan-fat.ttf') format('truetype');
+}
+
 .rtl{
 	direction: rtl;
 }
@@ -12,6 +42,17 @@ header .login_box{
 }
 body{
 	margin-bottom: 140px;
+	font: 15px/30px Helvetica, Tahoma, Sans-Serif; 
+	font-family: 'B Mitra' ;
+	
+}
+.navbar {
+	background-color:#006400;
+	color:#d2691e;
+}
+nav .container-fluid ul{
+	margin-right:20px;
+	color:#d2691e;
 }
 
 .finish_nav{
@@ -23,33 +64,62 @@ body{
 }
 
 .footer container{
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-   /*Set the fixed height of the footer here */
-  height: 150px;
-  background-color: #f4f5f5;
+	  	
+	  position: absolute;
+	  bottom: 0;
+	  width: 100%;
+	   /*Set the fixed height of the footer here */
+	  height: 150px;
+	  background-color:  rgb(255, 180, 0 );
+		color:#fff;
+}
+.container{
+	
+	  padding-top:25px;
+}
+h1{
+	font-family:'Droid Arabic Naskh';
+	margin-top:55px;
+	color:#d2691e;
+	font-weight:bold;
+	
+}
+.blog-description{
+	color:#228b22	;
 }
 
 .footer_links a{
 	text-decoration: none;
-	color: #fff;
+	color: rgb(25,51,0);
 }
 
 .footer_links{
-	background-color: #111;
+	background-color:  #ffe4b5;
+	color:rgb(25,51,0);
 }
-
+.list-group{
+	border:#30ff30;
+	color:#cd853f;
+	margin-right:0px;
+  	-webkit-box-shadow:0 0 20px rgba(255, 180, 0, 0.5);, 0 0px 0px rgba(0, 0, 0, 0.3);
+  	/*box-shadow: 0 0 20px rgba(255, 180, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);*/
+}
+.carousel{
+	margin-top:30px;
+	border-radius: 3px;
+  	-webkit-box-shadow: 0 0 100px rgba(255, 180, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+  	box-shadow: 0 0 100px rgba(255, 180, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
 .picture{
 	height: 350px;
 }
 
 .right_aside{
 	float: right;
-	margin-top: 0px;
+	margin-top: 50px;
+	margin-right:0px;
 	position: relative;
 }
-
 .null_for_end{
 	height: 150px;
 }

@@ -16,12 +16,12 @@
 
             <ul class="nav navbar-nav">
             	<li><img class="nav_img" src="{% static 'user/img/def.jpg' %}" /></li>
-                <li><a href="??">خروج</a></li>
+                <li><a href="??" style="color:rgb(255,196,0)">خروج</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="??"> گردش ها</a></li>
-                <li><a href="??">حساب من</a></li>
-                <li><a href="??">خانه</a></li>
+                <li><a href="??"style="color:rgb(255,196,0);font-weight:bold;"  onmouseover="this.style.color='#d2691e'"onmouseout="this.style.color='rgb(255,196,0)'"> گردش ها</a></li>
+                <li><a href="??"style="color:rgb(255,196,0);font-weight:bold;"onmouseover="this.style.color='#d2691e'"onmouseout="this.style.color='rgb(255,196,0)'">حساب من</a></li>
+                <li><a href="??"style="color:rgb(255,196,0);font-weight:bold;"onmouseover="this.style.color='#d2691e'"onmouseout="this.style.color='rgb(255,196,0)'">خانه</a></li>
               </ul>
           </div>
       </div>
@@ -30,7 +30,7 @@
     <div class="finish_nav , rtl , col-md-12">
     	<header class='blog-header , container'>
     		<form class="col-md-3 , login_box">
-    			<h3 class="col-md-12">ورود</h3>
+    			<h3 class="col-md-12"  style="color:#228b22;">ورود</h3>
   				<div class="form-group , col-md-12">
      				<input class="form-control , col-md-12" id="inputEmail3" placeholder="نام کاربری">
   				</div>
@@ -39,15 +39,16 @@
   				</div>
  				<div class="form-group , col-md-12">
   					<button type="submit" class="btn btn-success">ورود</button>
-  					<a type="button" class="btn btn-default">ثبت نام</a>
-  					<a>فراموشی رمز عبور</a>
+  					<a type="button" class="btn btn-default" onmouseover="this.style.backgroundColor='#ffa07a'"onmouseout="this.style.backgroundColor=''">ثبت نام</a>
+  					<a style="color:#228b22" onmouseover="this.style.color='#d2691e'"onmouseout="this.style.color='#228b22'">
+                        فراموشی رمز عبور</a>
   				</div>
  			</form>
     		<h1 class="blog-title , col-md-9">
 				سپاس ایران
 			</h1>
 			<p class="lead blog-description , col-md-9">
-			سامانه خرید الکترونیکی چی چیه چی چی :)
+			سامانه یکپارچه خدمات سفر الکترونیکی گردشگران ایران
 			</p>
 		</header>
 
@@ -58,32 +59,33 @@
 
 		<aside class='right_aside , col-md-3 sidebar'>
 <!-- 			<div class="col-md-"></div>
- -->			<div class="list-group , col-md-10">
-				<a href="#" class="list-group-item">
+ -->			<div class="list-group , col-md-10" style="color:green;font-weight:bold;">
+				<a href="#" class="list-group-item" 					onmouseover="this.style.backgroundColor='#fff8dc'"onmouseout="this.style.backgroundColor=''">
+
 				<span class='glyphicon glyphicon-home ,col-md-1' aria-hidden='true'></span>
 				<span class='col-md-11'>خانه</span>
 				</a>
-				<a href="#" class="list-group-item">
+				<a href="#" class="list-group-item" onmouseover="this.style.backgroundColor='#fff8dc'"onmouseout="this.style.backgroundColor=''">
 				<span class='glyphicon glyphicon-user ,col-md-1' aria-hidden='true'></span>
 				<span class='col-md-11'>حساب من</span>
 				</a>
-				<a href="#" class="list-group-item">
+				<a href="#" class="list-group-item" onmouseover="this.style.backgroundColor='#fff8dc'"onmouseout="this.style.backgroundColor=''">
 				<span class='glyphicon glyphicon-globe ,col-md-1' aria-hidden='true'></span>
 				<span class='col-md-11'>گردش ها</span>
 				</a>
-				<a href="#" class="list-group-item">
+				<a href="#" class="list-group-item" onmouseover="this.style.backgroundColor='#fff8dc'"onmouseout="this.style.backgroundColor=''">
 				<span class='glyphicon glyphicon-tent ,col-md-1' aria-hidden='true'></span>
 				<span class='col-md-11'>تعریف تور</span>
 				</a>
-				<a href="#" class="list-group-item">
+				<a href="#" class="list-group-item" onmouseover="this.style.backgroundColor='#fff8dc'"onmouseout="this.style.backgroundColor=''">
 				<span class='glyphicon glyphicon-send ,col-md-1' aria-hidden='true'></span>
 				<span class='col-md-11'>تعریف خدمت</span>
 				</a>
-				<a href="#" class="list-group-item">
+				<a href="#" class="list-group-item" onmouseover="this.style.backgroundColor='#fff8dc'"onmouseout="this.style.backgroundColor=''">
 				<span class='glyphicon glyphicon-piggy-bank ,col-md-1' aria-hidden='true'></span>
 				<span class='col-md-11'>تسویه</span>
 				</a>
-				<a href="#" class="list-group-item">
+				<a href="#" class="list-group-item" onmouseover="this.style.backgroundColor='#fff8dc'"onmouseout="this.style.backgroundColor=''">
 				<span class='glyphicon glyphicon-apple ,col-md-1' aria-hidden='true'></span>
 				<span class='col-md-11'>درباره ما</span>
 				</a>
@@ -95,7 +97,7 @@
 		<div class="null_for_end , col-md-12"></div>
 		<footer class = 'footer'>
 			<div class="footer_links , col-md-12">
-				<div class="col-md-4 , list-group , container">
+				<div class="col-md-4 , container">
 					<table class="table">
 						<tr><td><a href="%">قوانین سایت</a></td></tr>
 						<tr><td><a href="%">عضویت در سامانه</a></td></tr>
@@ -103,14 +105,14 @@
 						<tr><td><a href="%">نحوه ی رتبه دهی</a></td></tr>
 					</table>
 				</div>
-				<div class="col-md-4 ">
+				<div class="col-md-4 , list-group ,container">
 					<table class="table">
 						<tr><td><a href="%">شرکت تحلیلگران</a></td></tr>
 						<tr><td><a href="%">وبلاگ شرکت</a></td></tr>
 						<tr><td><a href="%">ارتباط با شرکت</a></td></tr>
 					</table>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4 ,list-group , container ">
 					<table class="col-md-12 , table">
 						<tr><td><a href="%" >سپاس ایران</a></td></tr>
 						<tr><td><a href="%" >هدف از راه اندازی سامانه</a></td></tr>
