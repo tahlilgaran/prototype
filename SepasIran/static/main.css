@@ -38,7 +38,14 @@ header{
 }
 
 header .login_box{
-	border-right: 3px solid #eee;
+    height: 120px;
+    width: 120px;
+    float: left;
+    margin-left: 60px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #eeeeee;
+    border-radius: 100%;
 }
 body{
 	margin-bottom: 140px;
@@ -79,7 +86,7 @@ nav .container-fluid ul{
 }
 h1{
 	font-family:'Droid Arabic Naskh';
-	margin-top:55px;
+	/*margin-top:0px;*/
 	color:#d2691e;
 	font-weight:bold;
 	

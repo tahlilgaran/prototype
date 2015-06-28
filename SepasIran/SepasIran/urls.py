@@ -3,7 +3,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'home/$', 'tourism.views.home'),
+    url(r'home/$', 'informing.views.home'),
     url(r'help/$', 'tourism.views.help'),
     url(r'signup/$', 'user.views.signup'),
     url(r'signIn/$', 'user.views.signin'),
