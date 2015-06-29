@@ -7,7 +7,7 @@
     <!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
-
+    {% block css %}{% endblock %}
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top">
@@ -21,7 +21,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="??"style="color:rgb(255,196,0);font-weight:bold;"  onmouseover="this.style.color='#d2691e'"onmouseout="this.style.color='rgb(255,196,0)'"> گردش ها</a></li>
                 <li><a href="??"style="color:rgb(255,196,0);font-weight:bold;"onmouseover="this.style.color='#d2691e'"onmouseout="this.style.color='rgb(255,196,0)'">حساب من</a></li>
-                <li><a href="??"style="color:rgb(255,196,0);font-weight:bold;"onmouseover="this.style.color='#d2691e'"onmouseout="this.style.color='rgb(255,196,0)'">خانه</a></li>
+                <li><a href="/home/"style="color:rgb(255,196,0);font-weight:bold;"onmouseover="this.style.color='#d2691e'"onmouseout="this.style.color='rgb(255,196,0)'">خانه</a></li>
               </ul>
           </div>
       </div>
@@ -67,7 +67,7 @@
 
 		<aside class='right_aside , col-md-3 sidebar'>
     		<div class="list-group , col-md-10" style="color:green;font-weight:bold;">
-                <a href="#" class="list-group-item" 					onmouseover="this.style.backgroundColor='#fff8dc'"onmouseout="this.style.backgroundColor=''">
+                <a href="/home/" class="list-group-item" 					onmouseover="this.style.backgroundColor='#fff8dc'"onmouseout="this.style.backgroundColor=''">
                 <span class='glyphicon glyphicon-home ,col-md-1' aria-hidden='true'></span>
                 <span class='col-md-11'>خانه</span>
                 </a>

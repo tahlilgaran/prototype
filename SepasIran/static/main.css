@@ -111,15 +111,7 @@ h1{
   	-webkit-box-shadow:0 0 20px rgba(255, 180, 0, 0.5);, 0 0px 0px rgba(0, 0, 0, 0.3);
   	/*box-shadow: 0 0 20px rgba(255, 180, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);*/
 }
-.carousel{
-	margin-top:30px;
-	border-radius: 3px;
-  	-webkit-box-shadow: 0 0 100px rgba(255, 180, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
-  	box-shadow: 0 0 100px rgba(255, 180, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
-}
-.picture{
-	height: 350px;
-}
+
 
 .right_aside{
 	float: right;

@@ -1,7 +1,10 @@
 {% extends "base.html" %}
 {% load staticfiles %}
+{% block css %}
+	<link rel="stylesheet" type="text/css" href="{% static 'present_trip/css/main.css' %}">
+{% endblock %}
 {% block content %}
-	<div class="top_part">
+	<div id="top_part">
 				<div class="col-md-1"></div>
 				<div class="col-md-10">
 						    <!-- Carousel
@@ -16,21 +19,21 @@
 
 				      <div class="carousel-inner" role="listbox">
 				        <div class="item active , picture">
-				          <img class="first-slide" src="{% static 'define_and_validate_trip/img/ax2.jpg' %}" alt="First slide">
+				          <img class="first-slide" src="{% static 'define_and_validate_trip/img/ax1.jpg' %}" alt="First slide">
 				          <div class="container">
 				            <div class="carousel-caption">
 				            </div>
 				          </div>
 				        </div>
 				        <div class="item , picture">
-				          <img class="second-slide" src="{% static 'define_and_validate_trip/img/ax3.jpg' %}" alt="Second slide">
+				          <img class="second-slide" src="{% static 'define_and_validate_trip/img/ax2.jpg' %}" alt="Second slide">
 				          <div class="container">
 				            <div class="carousel-caption">
 				            </div>
 				          </div>
 				        </div>
 				        <div class="item , picture">
-				          <img class="third-slide" src="{% static 'define_and_validate_trip/img/ax4.jpg' %}" alt="Third slide">
+				          <img class="third-slide" src="{% static 'define_and_validate_trip/img/ax3.jpg' %}" alt="Third slide">
 				          <div class="container">
 				            <div class="carousel-caption">
 				            </div>
@@ -48,41 +51,76 @@
 				    </div><!-- /.carousel -->
 				</div>
 				<div class="col-md-1"></div>
-			</div>
-{#    {% if login  %}#}
-	    <div class="container , col-md-12">
-            <div class="container , col-md-5">
+	</div>
+
+    <div id="down_part" hidden="hidden">
+        {#    {% if login  %}#}
+	    <div class=" col-md-6 , box">
+            <h4>تور های تخفیفی</h4>
+            <img class="col-md-12 " id="promotion_pic" src="{% static 'define_and_validate_trip/img/ax5.jpg' %}">
+            <div class="col-md-12">
                 <p>
-                    <a href="takGardesh.html">
+                    <a href="takGardesh.html" onmouseover="change_pic_1(this)"
+                       name="{% static 'define_and_validate_trip/img/ax5.jpg' %}">
                                                    تور جنگل ابر تا ابشار مجن - شرکت گردشگری دالاهو
                     </a>
                 </p>
                 <p>
-                    <a href="takGardesh.html">
+                    <a href="takGardesh.html" onmouseover="change_pic_1(this)"
+                       name="{% static 'define_and_validate_trip/img/ax6.jpg' %}">
                                     اکو تور گیلان - ماسوله - آستارا - شرکت گردشگری مارکوپولو
                     </a>
                 </p>
                 <p>
-                    <a>
+                    <a href="takGardesh.html" onmouseover="change_pic_1(this)"
+                       name="{% static 'define_and_validate_trip/img/ax7.jpg' %}">
                                                       هتل پنج ستاره پارمیس کیش
                     </a>
                 </p>
             </div>
-
-            <img class="container , col-md-7" src="{% static 'define_and_validate_trip/img/ax5.jpg' %}">
 	    </div>
 
-        <div class="container , col-md-12">
-
-            <img class="container , col-md-7 " src="{% static 'define_and_validate_trip/img/ax7.jpg' %}">
-	    </div>
-
-        <div class="container , col-md-12">
-
-            <img class="container , col-md-7" src="{% static 'define_and_validate_trip/img/ax6.jpg' %}">
-	    </div>
-        <div class="container , col-md-6">
-        
+        <div class=" col-md-6 , box">
+            <h4>تور های تشویقی</h4>
+            <img class="col-md-12 " id="off_pic" src="{% static 'define_and_validate_trip/img/ax5.jpg' %}">
+            <div class="col-md-12">
+                <p>
+                    <a href="takGardesh.html" onmouseover="change_pic_2(this)"
+                       name="{% static 'define_and_validate_trip/img/ax5.jpg' %}">
+                                                   تور جنگل ابر تا ابشار مجن - شرکت گردشگری دالاهو
+                    </a>
+                </p>
+                <p>
+                    <a href="takGardesh.html" onmouseover="change_pic_2(this)"
+                       name="{% static 'define_and_validate_trip/img/ax6.jpg' %}">
+                                    اکو تور گیلان - ماسوله - آستارا - شرکت گردشگری مارکوپولو
+                    </a>
+                </p>
+                <p>
+                    <a href="takGardesh.html" onmouseover="change_pic_2(this)"
+                       name="{% static 'define_and_validate_trip/img/ax7.jpg' %}">
+                                                      هتل پنج ستاره پارمیس کیش
+                    </a>
+                </p>
+            </div>
         </div>
-{#    {% endif %}#}
+    </div>
+
+
+
+{% endblock %}
+
+
+{% block script %}
+    <script>
+        function change_pic_1(a){
+            var ax = document.querySelector('#promotion_pic');
+            ax.src = String(a.name);
+        }
+
+        function change_pic_2(a){
+            var ax = document.querySelector('#off_pic');
+            ax.src = String(a.name)
+        }
+    </script>
 {% endblock %}
