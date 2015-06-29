@@ -53,58 +53,7 @@
 				<div class="col-md-1"></div>
 	</div>
 
-    <div id="down_part" hidden="hidden">
-        {#    {% if login  %}#}
-	    <div class=" col-md-6 , box">
-            <h4>تور های تخفیفی</h4>
-            <img class="col-md-12 " id="promotion_pic" src="{% static 'define_and_validate_trip/img/ax5.jpg' %}">
-            <div class="col-md-12">
-                <p>
-                    <a href="takGardesh.html" onmouseover="change_pic_1(this)"
-                       name="{% static 'define_and_validate_trip/img/ax5.jpg' %}">
-                                                   تور جنگل ابر تا ابشار مجن - شرکت گردشگری دالاهو
-                    </a>
-                </p>
-                <p>
-                    <a href="takGardesh.html" onmouseover="change_pic_1(this)"
-                       name="{% static 'define_and_validate_trip/img/ax6.jpg' %}">
-                                    اکو تور گیلان - ماسوله - آستارا - شرکت گردشگری مارکوپولو
-                    </a>
-                </p>
-                <p>
-                    <a href="takGardesh.html" onmouseover="change_pic_1(this)"
-                       name="{% static 'define_and_validate_trip/img/ax7.jpg' %}">
-                                                      هتل پنج ستاره پارمیس کیش
-                    </a>
-                </p>
-            </div>
-	    </div>
-
-        <div class=" col-md-6 , box">
-            <h4>تور های تشویقی</h4>
-            <img class="col-md-12 " id="off_pic" src="{% static 'define_and_validate_trip/img/ax5.jpg' %}">
-            <div class="col-md-12">
-                <p>
-                    <a href="takGardesh.html" onmouseover="change_pic_2(this)"
-                       name="{% static 'define_and_validate_trip/img/ax5.jpg' %}">
-                                                   تور جنگل ابر تا ابشار مجن - شرکت گردشگری دالاهو
-                    </a>
-                </p>
-                <p>
-                    <a href="takGardesh.html" onmouseover="change_pic_2(this)"
-                       name="{% static 'define_and_validate_trip/img/ax6.jpg' %}">
-                                    اکو تور گیلان - ماسوله - آستارا - شرکت گردشگری مارکوپولو
-                    </a>
-                </p>
-                <p>
-                    <a href="takGardesh.html" onmouseover="change_pic_2(this)"
-                       name="{% static 'define_and_validate_trip/img/ax7.jpg' %}">
-                                                      هتل پنج ستاره پارمیس کیش
-                    </a>
-                </p>
-            </div>
-        </div>
-    </div>
+    {% block down_part %}{% endblock %}
 
 
 

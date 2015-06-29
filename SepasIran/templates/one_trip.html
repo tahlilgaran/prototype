@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block css %}
+	<link rel="stylesheet" type="text/css" href="{% static 'present_trip/css/main.css' %}">
+{% endblock %}
+{% block content %}
+    <div id="top_part" class="col-md-12">
+        <div class=" col-md-12">
+            <img src="{% static 'define_and_validate_trip/img/1.jpg' %}" class='picture'>
+
+            <div>
+                <img src="{% static 'define_and_validate_trip/img/2.jpg' %}" class="col-md-3">
+                <img src="{% static 'define_and_validate_trip/img/3.jpg' %}" class="col-md-3">
+                <img src="{% static 'define_and_validate_trip/img/4.jpg' %}" class="col-md-3">
+                <img src="{% static 'define_and_validate_trip/img/1.jpg' %}" class="col-md-3">
+            </div>
+        </div>
+    </div>
+{#    <div id="down_part , box . col-md-12">#}
+{#        <table>#}
+{#            <thead>#}
+{#            هتل پارمیس کیش#}
+{#            </thead>#}
+{#            <tbody>#}
+{#                <tr>#}
+{#                    <td>#}
+{#                        درجه:#}
+{#                    </td>#}
+{#                    <td>#}
+{#                        ۵ ستاره#}
+{#                    </td>#}
+{#                </tr>#}
+{#                <tr>#}
+{#                    <td></td>#}
+{#                    <td></td>#}
+{#                </tr>#}
+{#                <tr>#}
+{#                    <td></td>#}
+{#                    <td></td>#}
+{#                </tr>#}
+{#            </tbody>#}
+{#        </table>#}
+{#    </div>#}
+{% endblock %}
