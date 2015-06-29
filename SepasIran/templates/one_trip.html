@@ -4,41 +4,269 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'present_trip/css/main.css' %}">
 {% endblock %}
 {% block content %}
-    <div id="top_part" class="col-md-12">
-        <div class=" col-md-12">
-            <img src="{% static 'define_and_validate_trip/img/1.jpg' %}" class='picture'>
+{#*********** ========================= service =========================== **************#}
+    {% if kind == 'service' %}
+        <div id="top_part" class="col-md-12">
+            <div class="col-md-1"></div>
+                    <div class="col-md-10">
+                                <!-- Carousel
+                        ================================================== -->
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                          <!-- Indicators -->
+                          <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                            <li data-target="#myCarousel" data-slide-to="4"></li>
+                          </ol>
 
-            <div>
-                <img src="{% static 'define_and_validate_trip/img/2.jpg' %}" class="col-md-3">
-                <img src="{% static 'define_and_validate_trip/img/3.jpg' %}" class="col-md-3">
-                <img src="{% static 'define_and_validate_trip/img/4.jpg' %}" class="col-md-3">
-                <img src="{% static 'define_and_validate_trip/img/1.jpg' %}" class="col-md-3">
+                          <div class="carousel-inner" role="listbox">
+                            <div class="item active , picture">
+                              <img class="first-slide" src="{% static 'define_and_validate_trip/img/1.jpg' %}" alt="First slide">
+                              <div class="container">
+                                <div class="carousel-caption">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="item , picture">
+                              <img class="second-slide" src="{% static 'define_and_validate_trip/img/2.jpg' %}" alt="Second slide">
+                              <div class="container">
+                                <div class="carousel-caption">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="item , picture">
+                              <img class="third-slide" src="{% static 'define_and_validate_trip/img/3.jpg' %}" alt="Third slide">
+                              <div class="container">
+                                <div class="carousel-caption">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="item , picture">
+                              <img class="third-slide" src="{% static 'define_and_validate_trip/img/4.jpg' %}" alt="Third slide">
+                              <div class="container">
+                                <div class="carousel-caption">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="item , picture">
+                              <img class="third-slide" src="{% static 'define_and_validate_trip/img/ax7.jpg' %}" alt="Third slide">
+                              <div class="container">
+                                <div class="carousel-caption">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                          </a>
+                        </div><!-- /.carousel -->
+                    </div>
+                    <div class="col-md-1"></div>
+        </div>
+        <div id="down_part" class="box , col-md-12">
+
+            <div class="bs-example bs-example-tabs , col-md-7" data-example-id="togglable-tabs">
+                <ul id="myTabs" class="nav nav-tabs" role="tablist">
+                  <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">امکانات</a></li>
+                  <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">خدمات هتل</a></li>
+                </ul>
+                <div id="myTabContent" class="tab-content">
+                  <div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledBy="home-tab">
+                      <P>
+                          سالن بيليارد - استخر سونا - جكوزى - آرايشگاه مردانه - آرايشگاه بانوان - كافى شاپ - كافى نت - فروشگاه - سالن همايش با ظرفيت 200 نفر - ترانسفر رفت و برگشت فرودگاهى - صبحانه بوفه رايگان - سرو ميوه و آب معدنى رايگان هر روزه - استفاده از اينترنت در اتاق ها
+                      </P>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledBy="profile-tab">
+                      <P>
+                          - صبحانه و ناهار به صورت بوفه
+    - ترانسفر فرودگاهی
+    - سرو میوه و آب معدنی در عصر
+    - استخر
+    - سونا
+    - جکوزی
+    - چای و نسکافه (در اتاق)
+
+                      </P>
+                  </div>
+                </div>
+            </div><!-- /example -->
+
+            <div class="col-md-5">
+                <table class="table">
+                    <thead>
+                    هتل پارمیس کیش
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                شهر:
+                            </td>
+                            <td>
+                                کیش
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                درجه:
+                            </td>
+                            <td>
+                                ۵ ستاره
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                زمان:
+                            </td>
+                            <td>
+                                ۲۰ الی ۲۵ تیر
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
-    </div>
-{#    <div id="down_part , box . col-md-12">#}
-{#        <table>#}
-{#            <thead>#}
-{#            هتل پارمیس کیش#}
-{#            </thead>#}
-{#            <tbody>#}
-{#                <tr>#}
-{#                    <td>#}
-{#                        درجه:#}
-{#                    </td>#}
-{#                    <td>#}
-{#                        ۵ ستاره#}
-{#                    </td>#}
-{#                </tr>#}
-{#                <tr>#}
-{#                    <td></td>#}
-{#                    <td></td>#}
-{#                </tr>#}
-{#                <tr>#}
-{#                    <td></td>#}
-{#                    <td></td>#}
-{#                </tr>#}
-{#            </tbody>#}
-{#        </table>#}
-{#    </div>#}
+    {% endif %}
+{#*********** ========================= tour =========================== **************#}
+    {% if kind == 'tour'%}
+        <div id="top_part" class="col-md-12">
+            <div class="col-md-1"></div>
+                    <div class="col-md-10">
+                                <!-- Carousel
+                        ================================================== -->
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                          <!-- Indicators -->
+                          <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                          </ol>
+
+                          <div class="carousel-inner" role="listbox">
+                            <div class="item active , picture">
+                              <img class="first-slide" src="{% static 'define_and_validate_trip/img/t1.jpg' %}" alt="First slide">
+                              <div class="container">
+                                <div class="carousel-caption">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="item , picture">
+                              <img class="second-slide" src="{% static 'define_and_validate_trip/img/t2.jpg' %}" alt="Second slide">
+                              <div class="container">
+                                <div class="carousel-caption">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="item , picture">
+                              <img class="third-slide" src="{% static 'define_and_validate_trip/img/t3.jpg' %}" alt="Third slide">
+                              <div class="container">
+                                <div class="carousel-caption">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="item , picture">
+                              <img class="third-slide" src="{% static 'define_and_validate_trip/img/t4.jpg' %}" alt="Third slide">
+                              <div class="container">
+                                <div class="carousel-caption">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                          </a>
+                        </div><!-- /.carousel -->
+                    </div>
+                    <div class="col-md-1"></div>
+        </div>
+        <div id="down_part" class="box , col-md-12">
+            <div class="bs-example bs-example-tabs , col-md-7" data-example-id="togglable-tabs">
+                <ul id="myTabs" class="nav nav-tabs" role="tablist">
+                  <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">درباره مکان</a></li>
+                  <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">اطلاعات حرکت</a></li>
+                </ul>
+                <div id="myTabContent" class="tab-content">
+                  <div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledBy="home-tab">
+                      <P>
+                          چشمه های اسرار آمیز باداب سورت اروست مشتمل بر دوازده چشمه با آب های کاملاً متفاوت از لحاظ رنگ بو مزه می باشند.باداب سورت [Badab Soort] نیز به معنی شدت اثر آب گاز دار است که در زبان محلی به آن اروست وائو یا بادو می گویند. همچنین ادعای روستاهای اطراف مبنی بر مالکیت باداب سورت نیز کاملا بی اساس است و در اصل نام چندین و چند هزار ساله این چشمه ها باداب اروست می باشد.
+                      </P>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledBy="profile-tab">
+                      <P>
+محل حرکت: جنوب میدان ونک،روبروی فروشگاه چرم مشهد
+ زمان حرکت: چهارشنبه 1394/04/17 -	ساعت 05:00 صبح (لطفا نیم ساعت قبل از حرکت در محل حضور داشته باشید)
+ وسیله نقلیه اصلی: وسیلۀ نقلیۀ توریستی
+                      </P>
+                  </div>
+                </div>
+            </div><!-- /example -->
+
+            <div class="col-md-5">
+                <table class="table">
+                    <thead>
+                    تور باداب سورت تا دریاچه چورت (اقامت کمپ)
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                شرکت گردشگری:
+                            </td>
+                            <td>
+دالاهو
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+مکان:
+                            </td>
+                            <td>
+استان مازندران
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                زمان:
+                            </td>
+                            <td>
+                                ۱۷ و ۱۸ تیرماه
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                نوع تور:
+                            </td>
+                            <td>
+                                طبیعت گردی
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    {% endif %}
+{#*********** ========================= pack =========================== **************#}
+    {% if kind == 'pack' %}
+    {% endif %}
+
+    <div class="col-md-6"  style="float: left; direction: ltr">
+            <button type="button" class="btn btn-danger">انصراف</button>
+            <button type="button" class="btn btn-warning">رزرو</button>
+            <button type="button" class="btn btn-success">خرید</button>
+        </div>
 {% endblock %}

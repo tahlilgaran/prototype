@@ -13,7 +13,7 @@ urlpatterns = [
     url(r'userPage/tourBuilder/(P?<user_id>\d+)$', 'informing.views.builder_page'),
     url(r'userPage/tourists/(P?<user_id>\d+)$', 'informing.views.tourist_page'),
     url(r'tourList/(P?<search_id>\d+)/$', 'present_trip.views.listTour'),
-    url(r'tourshow/$', 'present_trip.views.show_one_trip'),
+    url(r'show/(\w+)/$', 'present_trip.views.show_one_trip'),
     url(r'purchase/(P?<tour_id>\d+)/$', 'buy_cancel.views.purchase'),
     url(r'payment/(P?<id>\d+)/$', 'accounting.views.payment'),
     url(r'payment/Confirm/(P?<id>\d+)/$', 'accounting.views.confirm'),
