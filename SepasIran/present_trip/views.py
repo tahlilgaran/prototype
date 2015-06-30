@@ -13,5 +13,6 @@ def show_one_trip(request, kind = '' ,tour_id = '1'):
     elif kind == 'pack':
         return render(request , "one_trip.html" , {'kind':kind})
 
-
+def show_one_trip_status(request , kind =''):
+    return render(request , "status_trip.html")
 # Create your views here.
