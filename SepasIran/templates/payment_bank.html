@@ -14,6 +14,7 @@
 </head>
 <body style="background-color:#FFE4C4;font-family: 'B Mitra';">
 <form action="/payment/confirm/" method="POST">
+    {% csrf_token %}}
     <div class="container" style="direction: rtl" >
     <div class='row'>
         <div class='col-md-4'></div>
@@ -53,7 +54,7 @@
               <div class='col-md-12'>
                 <div class='form-control total btn btn-info' style="background-color:#FF8C00">
                   مبلغ کل پرداختی:
-                  <span class='amount'>۸۰۰۰۰۰۰ریال</span>
+                  <span class='amount'>۷۶۵۰۰۰۰ ریال</span>
                 </div>
               </div>
             </div>
