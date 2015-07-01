@@ -15,4 +15,7 @@ def show_one_trip(request, kind = '' ,tour_id = '1'):
 
 def show_one_trip_status(request , kind =''):
     return render(request , "status_trip.html")
+
+def search(request):
+    return render(request , "search_result.html")
 # Create your views here.
