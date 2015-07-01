@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block css %}
+	<link rel="stylesheet" type="text/css" href={% static 'buy/css/main.css' %}>
+{% endblock %}
+
+{% block content %}
+<div  class="col-md-12 container">
+            <div id="top_part" class="col-md-12">
+                   <!-- <div class="col-md-10">-->
+
+                        <h2 style="color: chocolate;font-weight: bold;">درسافت اطلاعات رزرو شما</h2>
+                        <div style="margin: 20px;margin-top: 40px;"><span style="font-weight: bold;">نام شرکت گردشگری تور:</span> دالاهو
+                            <p>
+                            <span style="font-weight: bold;">نام تور :</span>تور باداب سورت تا دریاچه چورت (اقامت کمپ)
+                            </p>
+
+                            <p>
+                            <span style="font-weight: bold;">قیمت برای هر نفر:</span>۲۵۵۰۰۰۰ ریال
+                            </p>
+
+                        </div>
+            </div>
+             <div id="down_part" class="col-md-12" style="right: 20px;">
+                         <form action="/reserve/confirm/" method="POST" >
+                            {%  csrf_token %}
+                            <p>
+                            <span style="font-weight: bold;">تعداد افراد:</span>
+                                 <input type="text" id="rows" style="width: 70px;margin:10px; border-radius: 2px;"/>
+                                 <button  type="button" class="btn btn-success" value="ورود اطلاعات " id="rows" style=" margin: 10px" onclick='createTable();' >وارد کردن اطلاعات</button>
+                                    <p> توجه : اولین نفری که نام او در فرم اطلاعات رزرو کنندگان وارد میشود به عنوان سرپرست محسوب میگردد</p>
+                                  <div id="t" class="col-md-12" ></div>
+                             </p>
+
+                             <div id="total"></div>
+
+                         </form>
+    </div>
+    <div class="col-md-1">
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script type="text/javascript">
+
+        function createTable()
+                     {
+
+                       var num_rows = document.getElementById('rows').value;
+                         var num_cols = 3;
+                         var theader = '<table border="1" class="table-bordered col-md-8" style="border-color: #CD6600">\n';
+                         console.log(theader)
+                         var tbody =
+                                 '<td class="col-md-1">نام</td><td class="col-md-1">نام خانوادگی</td><td class="col-md-1">شماره ی ملی</td>';
+                         for( var i=0; i<num_rows;i++)
+                         {
+                             console.log(i)
+                             tbody += '<tr>';
+                             for( var j=0; j<num_cols;j++)
+                             {
+                                 tbody += '<td class="col-md-1">';
+                                 tbody += '<input type="text" style="width: 250px;border:0px white;">';
+                                 tbody += '</td>'
+                             }
+                             tbody += '</tr>\n';
+                         }
+                         var tfooter = '</table>';
+                          document.getElementById('t').innerHTML = theader + tbody + tfooter;
+
+                          document.getElementById('total').innerHTML = '<div style="top: 100px;">شما به مدت یک هفته فرصت دارید رزرو خود را بخرید </div><input type="submit" class="btn btn-success" value="تایید رزرو" style="float:left;margin-left:20px;"/>';
+                     }
+
+    </script>
+    <style type="css/text">
+     tr{
+         width: 30px;
+     }
+    input{
+        width: 20px;
+    }
+    </style>
+{% endblock %}
+<!----->
