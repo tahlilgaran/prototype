@@ -6,6 +6,7 @@
 {% block content %}
     <div class="col-md-12">
         <div class="box , col-md-4">
+            {% if ispack == 'pack' %}<input type="checkbox" value/>{% endif %}
             <img src="{% static 'define_and_validate_trip/img/ax7.jpg' %}" style="height: 180px;">
             <table class="table">
                 <tr>
@@ -47,6 +48,7 @@
         </div>
 
         <div class="box , col-md-4">
+            {% if ispack == 'pack' %}<input type="checkbox" value/>{% endif %}
             <img src="{% static 'define_and_validate_trip/img/t1.jpg' %}" style="height: 180px;">
             <table class="table">
                 <tr>
@@ -88,6 +90,7 @@
         </div>
 
         <div class="box , col-md-4">
+            {% if ispack == 'pack' %}<input type="checkbox" value/>{% endif %}
             <img src="{% static 'define_and_validate_trip/img/ax7.jpg' %}" style="height: 180px;">
             <table class="table">
                 <tr>
@@ -128,4 +131,21 @@
             </button>
         </div>
     </div>
+{% endblock %}
+
+{% block button %}
+    {% if username == 'gardeshgar' %}
+        {% if ispack == 'pack' %}
+            <div class="col-md-12">
+                <a type="button" href="/show/pack/{{ username }}" class="btn btn-success">
+مشاهده بسته خدمات
+                </a>
+        {% else %}
+            <div class="col-md-12">
+                <a type="button" href="/search/result/{{ username }}/pack" class="btn btn-info">
+                        ایجاد بسته خدمات
+                </a>
+            </div>
+        {% endif %}
+    {% endif %}
 {% endblock %}
