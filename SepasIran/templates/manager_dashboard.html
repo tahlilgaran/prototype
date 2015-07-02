@@ -1,0 +1,276 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'manager_dashboard/css/main.css' %}">
+{% endblock %}
+
+{% block manager_content %}
+    <div class="finish_nav , rtl ">
+{% block content_dashboard %}
+    <div class="box col-md-3">
+        <table>
+            <tr>
+                <td><strong>
+                    نظرات برخط کاربران
+                </strong></td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                <span>
+                    <img class="gardeshgar_img" src="{% static 'manager_dashboard/image/girl.jpg' %}">
+                </span>
+                <span class="gardeshgar_name_box">
+فرزانه مشهدی :
+                </span>
+
+                        <div class="col-md-12 gardeshgar_comment_box">
+                            تور ما خیلی خوب نیست ، مسئولمون همش میره این ور و اون ور ، لطفا رسیدگی کنید
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                <span>
+                    <img class="gardeshgar_img" src="{% static 'manager_dashboard/image/girl.jpg' %}">
+                </span>
+                <span class="gardeshgar_name_box">
+فرزانه مشهدی :
+                </span>
+
+                        <div class="col-md-12 gardeshgar_comment_box">
+                            تور ما خیلی خوب نیست ، مسئولمون همش میره این ور و اون ور ، لطفا رسیدگی کنید
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                <span>
+                    <img class="gardeshgar_img" src="{% static 'manager_dashboard/image/girl.jpg' %}">
+                </span>
+                <span class="gardeshgar_name_box">
+فرزانه مشهدی :
+                </span>
+
+                        <div class="col-md-12 gardeshgar_comment_box">
+                            تور ما خیلی خوب نیست ، مسئولمون همش میره این ور و اون ور ، لطفا رسیدگی کنید
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                <span>
+                    <img class="gardeshgar_img" src="{% static 'manager_dashboard/image/girl.jpg' %}">
+                </span>
+                <span class="gardeshgar_name_box">
+فرزانه مشهدی :
+                </span>
+
+                        <div class="col-md-12 gardeshgar_comment_box">
+                            تور ما خیلی خوب نیست ، مسئولمون همش میره این ور و اون ور ، لطفا رسیدگی کنید
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="col-md-5">
+        <div class="box col-md-12">
+            <table>
+                <tr>
+                    <td><strong>
+                        تورهای در حال اجرا
+                    </strong></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="tour col-md-12">
+                <span>
+                    <img class="tour_img" src="{% static 'manager_dashboard/image/manzare2.jpg' %}">
+                </span>
+                <span class="tour_detail_box">
+                تور شمال
+                </span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="tour col-md-12">
+                <span>
+                    <img class="tour_img" src="{% static 'manager_dashboard/image/hotel2.jpg' %}">
+                </span>
+                <span class="tour_detail_box">
+                تور شمال
+                </span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="tour col-md-12">
+                <span>
+                    <img class="tour_img" src="{% static 'manager_dashboard/image/manzare3.jpg' %}">
+                </span>
+                <span class="tour_detail_box">
+                تور شمال
+                </span>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="box col-md-12">
+            <table>
+                <tr>
+                    <td><strong>
+                        تورهای برتر
+                    </strong></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="tour col-md-12">
+                <span>
+                    <img class="tour_img" src="{% static 'manager_dashboard/image/manzare1.jpg' %}">
+                </span>
+                <span class="tour_detail_box">
+                تور شمال
+                </span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="tour col-md-12">
+                <span>
+                    <img class="tour_img" src="{% static 'manager_dashboard/image/hotel1.jpg' %}">
+                </span>
+                <span class="tour_detail_box">
+                تور شمال
+                </span>
+                        </div>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+{% endblock content_dashboard %}
+
+    <div class="col-md-3 right-sidebar">
+        <div class="col-md-12">
+            <strong>
+                <img class="logo" src="{% static 'manager_dashboard/image/sepas_logo.jpg' %}">
+                <br>
+داشبورد مدیریتی سامانه سپاس ایران
+</strong>
+        </div>
+        <div class="col-md-12 ">
+            <hr>
+            <table>
+                <tr>
+                    <td>
+                        <strong>
+                            اداری
+                        </strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <a href="http://127.0.0.1:8000/manager/userLists/">
+                        اطلاعات گردشگران
+                   </a> </td>
+                </tr>
+                <tr>
+                    <td> <a href="http://127.0.0.1:8000/manager/userLists/">
+                        اطلاعات گردش سازان
+                 </a>    </td>
+                </tr>
+                <tr>
+                    <td> <a href="http://127.0.0.1:8000/manager/userLists/">
+                        اطلاعات خدمت سازان
+                   </a>  </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class=" col-md-12">
+            <hr>
+            <table>
+                <tr>
+                    <td>
+                        <strong>
+                            مالی
+                        </strong></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        تراکنش ها
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        درصد قراردادها
+                    </td>
+                </tr>
+            </table>
+        </div>
+  <div class="col-md-12 ">
+            <hr>
+                     <table>
+                <tr>
+                    <td>
+                        <a href="http://127.0.0.1:8000/manager/tourLists">
+                    تورهای در حال اجرا</a></td>
+                </tr>
+
+                <tr>
+                    <td><a href="http://127.0.0.1:8000/manager/tourRating">
+                        رتبه بندی تورها
+                    </a></td>
+                </tr>
+                        <tr>
+                    <td><a href="http://127.0.0.1:8000/manager/OnlineComments/">
+                        نظرات برخط گردشگران
+                    </a></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class=" col-md-12">
+            <hr>
+            <table>
+                <tr>
+                    <td>
+                        مشاهده سایت
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        تنظیمات
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+
+    </div>
+
+    </div>   {#    end Wrapper#}
+
+{% endblock manager_content %}
+
+
+{% block script %}
+{% endblock %}

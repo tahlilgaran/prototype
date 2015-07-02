@@ -1,5 +1,4 @@
 {% load staticfiles %}
-<!DOCTYPE html>
 <html>
 <head lang="en">
     <meta charset="UTF-8">
@@ -7,23 +6,22 @@
     <!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <!-- Include Required Prerequisites -->
-
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/1/daterangepicker-bs3.css" />
-
 	<link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
 
     {% block css %}{% endblock %}
 </head>
 <body>
-	<nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container-fluid">
-          <div class="collapse navbar-collapse">
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse">
 
             <ul class="nav navbar-nav">
-            	<li><img class="nav_img" src="{% static 'user/img/def.jpg' %}" /></li>
+                <li><img class="nav_img" src="{% static 'user/img/def.jpg' %}"/></li>
                 <li><a href="??" style="color:rgb(255,196,0)">خروج</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
+<<<<<<< HEAD
                 <li><a href="??"style="color:rgb(255,196,0);font-weight:bold;"  onmouseover="this.style.color='#d2691e'"onmouseout="this.style.color='rgb(255,196,0)'"> گردش ها</a></li>
                 <li><a href="/userpage/{{ username }}"style="color:rgb(255,196,0);font-weight:bold;"onmouseover="this.style.color='#d2691e'"onmouseout="this.style.color='rgb(255,196,0)'">حساب من</a></li>
                 <li><a href="/home/"style="color:rgb(255,196,0);font-weight:bold;"onmouseover="this.style.color='#d2691e'"onmouseout="this.style.color='rgb(255,196,0)'">خانه</a></li>
@@ -31,112 +29,157 @@
           </div>
       </div>
     </nav>
+=======
+                <li><a href="??" style="color:rgb(255,196,0);font-weight:bold;" onmouseover="this.style.color='#d2691e'"
+                       onmouseout="this.style.color='rgb(255,196,0)'"> گردش ها</a></li>
+                <li><a href="??" style="color:rgb(255,196,0);font-weight:bold;" onmouseover="this.style.color='#d2691e'"
+                       onmouseout="this.style.color='rgb(255,196,0)'">حساب من</a></li>
+                <li><a href="/home/" style="color:rgb(255,196,0);font-weight:bold;"
+                       onmouseover="this.style.color='#d2691e'" onmouseout="this.style.color='rgb(255,196,0)'">خانه</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+{%  block manager_content %}
+<div class="finish_nav , rtl , col-md-12">
+    <header class='blog-header , container'>
+>>>>>>> maryam
 
-    <div class="finish_nav , rtl , col-md-12">
-    	<header class='blog-header , container'>
-{#    		<form class="col-md-3 , login_box">#}
-{#    			<h3 class="col-md-12"  style="color:#228b22;">ورود</h3>#}
-{#  				<div class="form-group , col-md-12">#}
-{#     				<input class="form-control , col-md-12" id="inputEmail3" placeholder="نام کاربری">#}
-{#  				</div>#}
-{#  				<div class="form-group , col-md-12">#}
-{#      				<input class="form-control , col-md-12" id="inputEmail3" placeholder="رمز عبور">#}
-{#  				</div>#}
-{# 				<div class="form-group , col-md-12">#}
-{#  					<button type="submit" class="btn btn-success">ورود</button>#}
-{#  					<a type="button" class="btn btn-default" onmouseover="this.style.backgroundColor='#ffa07a'"onmouseout="this.style.backgroundColor=''">ثبت نام</a>#}
-{#  					<a style="color:#228b22" onmouseover="this.style.color='#d2691e'"onmouseout="this.style.color='#228b22'">#}
-{#                        فراموشی رمز عبور</a>#}
-{#  				</div>#}
-{# 			</form>#}
-            <div class="login_box">
-                <h3 class="col-me-12" style="color:#228b22;"><br>
+        <div class="login_box">
+            <h3 class="col-me-12" style="color:#228b22;"><br>
                 ورود
-                </h3>
-            </div>
-            <div>
-                <h1 class="blog-title">
-				سپاس ایران
-                </h1>
-                <p class="lead blog-description">
+            </h3>
+        </div>
+        <div>
+            <h1 class="blog-title">
+                سپاس ایران
+            </h1>
+
+            <p class="lead blog-description">
                 سامانه یکپارچه خدمات سفر الکترونیکی گردشگران ایران
-                </p>
-            </div>
+            </p>
+        </div>
 
-		</header>
+    </header>
 
-		<main class='col-md-9 , container'>
-			{% block content %}{% endblock %}
+    <main class='col-md-9 , container'>
+        {% block content %}{% endblock %}
 
-		</main>
-
-		<aside class='right_aside , col-md-3 sidebar'>
-    		<div class="list-group , col-md-10" style="color:green;font-weight:bold;">
-                <a href="/home/" class="list-group-item" 					onmouseover="this.style.backgroundColor='#fff8dc'"onmouseout="this.style.backgroundColor=''">
-                <span class='glyphicon glyphicon-home ,col-md-1' aria-hidden='true'></span>
-                <span class='col-md-11'>خانه</span>
+    </main>
+    {% if username != "admin" %}
+        <aside class='right_aside , col-md-3 sidebar'>
+            <div class="list-group , col-md-10" style="color:green;font-weight:bold;">
+                <a href="/home/" class="list-group-item" onmouseover="this.style.backgroundColor='#fff8dc'"
+                   onmouseout="this.style.backgroundColor=''">
+                    <span class='glyphicon glyphicon-home ,col-md-1' aria-hidden='true'></span>
+                    <span class='col-md-11'>خانه</span>
                 </a>
+<<<<<<< HEAD
                 <a href="/userpage/{{ username }}" class="list-group-item" onmouseover="this.style.backgroundColor='#fff8dc'"onmouseout="this.style.backgroundColor=''">
                 <span class='glyphicon glyphicon-user ,col-md-1' aria-hidden='true'></span>
                 <span class='col-md-11'>حساب من</span>
+=======
+                <a href="#" class="list-group-item" onmouseover="this.style.backgroundColor='#fff8dc'"
+                   onmouseout="this.style.backgroundColor=''">
+                    <span class='glyphicon glyphicon-user ,col-md-1' aria-hidden='true'></span>
+                    <span class='col-md-11'>حساب من</span>
+>>>>>>> maryam
                 </a>
-                <a href="#" class="list-group-item" onmouseover="this.style.backgroundColor='#fff8dc'"onmouseout="this.style.backgroundColor=''">
-                <span class='glyphicon glyphicon-globe ,col-md-1' aria-hidden='true'></span>
-                <span class='col-md-11'>گردش ها</span>
+                <a href="#" class="list-group-item" onmouseover="this.style.backgroundColor='#fff8dc'"
+                   onmouseout="this.style.backgroundColor=''">
+                    <span class='glyphicon glyphicon-globe ,col-md-1' aria-hidden='true'></span>
+                    <span class='col-md-11'>گردش ها</span>
                 </a>
-                <a href="#" class="list-group-item" onmouseover="this.style.backgroundColor='#fff8dc'"onmouseout="this.style.backgroundColor=''">
-                <span class='glyphicon glyphicon-tent ,col-md-1' aria-hidden='true'></span>
-                <span class='col-md-11'>تعریف تور</span>
+                <a href="#" class="list-group-item" onmouseover="this.style.backgroundColor='#fff8dc'"
+                   onmouseout="this.style.backgroundColor=''">
+                    <span class='glyphicon glyphicon-tent ,col-md-1' aria-hidden='true'></span>
+                    <span class='col-md-11'>تعریف تور</span>
                 </a>
-                <a href="#" class="list-group-item" onmouseover="this.style.backgroundColor='#fff8dc'"onmouseout="this.style.backgroundColor=''">
-                <span class='glyphicon glyphicon-send ,col-md-1' aria-hidden='true'></span>
-                <span class='col-md-11'>تعریف خدمت</span>
+                <a href="#" class="list-group-item" onmouseover="this.style.backgroundColor='#fff8dc'"
+                   onmouseout="this.style.backgroundColor=''">
+                    <span class='glyphicon glyphicon-send ,col-md-1' aria-hidden='true'></span>
+                    <span class='col-md-11'>تعریف خدمت</span>
                 </a>
-                <a href="#" class="list-group-item" onmouseover="this.style.backgroundColor='#fff8dc'"onmouseout="this.style.backgroundColor=''">
-                <span class='glyphicon glyphicon-piggy-bank ,col-md-1' aria-hidden='true'></span>
-                <span class='col-md-11'>تسویه</span>
+                <a href="#" class="list-group-item" onmouseover="this.style.backgroundColor='#fff8dc'"
+                   onmouseout="this.style.backgroundColor=''">
+                    <span class='glyphicon glyphicon-piggy-bank ,col-md-1' aria-hidden='true'></span>
+                    <span class='col-md-11'>تسویه</span>
                 </a>
-                <a href="#" class="list-group-item" onmouseover="this.style.backgroundColor='#fff8dc'"onmouseout="this.style.backgroundColor=''">
-                <span class='glyphicon glyphicon-apple ,col-md-1' aria-hidden='true'></span>
-                <span class='col-md-11'>درباره ما</span>
+                <a href="#" class="list-group-item" onmouseover="this.style.backgroundColor='#fff8dc'"
+                   onmouseout="this.style.backgroundColor=''">
+                    <span class='glyphicon glyphicon-apple ,col-md-1' aria-hidden='true'></span>
+                    <span class='col-md-11'>درباره ما</span>
                 </a>
+<<<<<<< HEAD
 			</div>
 			<div class="col-md-2"></div>
             {% block button %}{% endblock %}
 		</aside>
+=======
+            </div>
+            <div class="col-md-2"></div>
 
-		<div class="null_for_end , col-md-12"></div>
-		<footer class = 'footer'>
-			<div class="footer_links , col-md-12">
-				<div class="col-md-4 , container">
-					<table class="table">
-						<tr><td><a href="%">قوانین سایت</a></td></tr>
-						<tr><td><a href="%">عضویت در سامانه</a></td></tr>
-						<tr><td><a href="%">تسویه حساب</a></td></tr>
-						<tr><td><a href="%">نحوه ی رتبه دهی</a></td></tr>
-					</table>
-				</div>
-				<div class="col-md-4 , list-group ,container">
-					<table class="table">
-						<tr><td><a href="%">شرکت تحلیلگران</a></td></tr>
-						<tr><td><a href="%">وبلاگ شرکت</a></td></tr>
-						<tr><td><a href="%">ارتباط با شرکت</a></td></tr>
-					</table>
-				</div>
-				<div class="col-md-4 ,list-group , container ">
-					<table class="col-md-12 , table">
-						<tr><td><a href="%" >سپاس ایران</a></td></tr>
-						<tr><td><a href="%" >هدف از راه اندازی سامانه</a></td></tr>
-						<tr><td><a href="%" >شمیم جم چیست؟</a></td></tr>
-						<tr><td><a href="%" >راهنمای استفاده از سامانه</a></td></tr>
-					</table>
-				</div>
-			</div>
-			<div class="container , col-md-12">
-			<p class= 'text-muted'> تمام حقوق این سایت متعلق به شرکت تحلیلگران می باشد.</p>
-			</div>
-		</footer>
-    </div>
+        </aside>
+    {% endif %}
+>>>>>>> maryam
+
+
+    <div class="null_for_end , col-md-12"></div>
+    <footer class='footer'>
+        <div class="footer_links , col-md-12">
+            <div class="col-md-4 , container">
+                <table class="table">
+                    <tr>
+                        <td><a href="%">قوانین سایت</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="%">عضویت در سامانه</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="%">تسویه حساب</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="%">نحوه ی رتبه دهی</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-4 , list-group ,container">
+                <table class="table">
+                    <tr>
+                        <td><a href="%">شرکت تحلیلگران</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="%">وبلاگ شرکت</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="%">ارتباط با شرکت</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-4 ,list-group , container ">
+                <table class="col-md-12 , table">
+                    <tr>
+                        <td><a href="%">سپاس ایران</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="%">هدف از راه اندازی سامانه</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="%">شمیم جم چیست؟</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="%">راهنمای استفاده از سامانه</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="container , col-md-12">
+            <p class='text-muted'> تمام حقوق این سایت متعلق به شرکت تحلیلگران می باشد.</p>
+        </div>
+    </footer>
+</div>
+{% endblock manager_content %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
  <!--<script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>-->
