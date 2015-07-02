@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block css %}
+	<link rel="stylesheet" type="text/css" href="{% static 'define_and_validate_trip/css/main.css' %}">
+{% endblock %}
+{% block content %}
+
+<h1>
+    درخواست تعریف تور یا خدمت
+</h1>
+
+<p>
+    لطفا نوع گردشی که میخواهید در سامانه سپاس ایران به فروش بگذارید انتخاب نمایید:
+</p>
+
+<div class="radio">
+  <label><input type="radio" name="optradio">
+  تور
+  </label>
+</div>
+<div class="radio">
+  <label><input type="radio" name="optradio">
+  هتل
+  </label>
+</div>
+<div class="radio disabled">
+  <label><input type="radio" name="optradio" disabled>
+  رستوران
+  </label>
+    </div>
+    <div class="radio disabled">
+  <label><input type="radio" name="optradio" disabled>
+هواپیما
+  </label>
+        </div>
+   <div class="radio disabled">
+  <label><input type="radio" name="optradio" disabled>
+قطار
+  </label>
+</div>
+
+{% endblock %}
