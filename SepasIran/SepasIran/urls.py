@@ -4,15 +4,14 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'home/$', 'present_trip.views.home'),
-    url(r'home/username/$' , 'present_trip.views.home_login'),
+    url(r'home/(\w+)/$' , 'present_trip.views.home'),
     url(r'help/$', 'tourism.views.help'),
     url(r'tourdefine/(P?<username>\w+)$', 'define_and_validate_trip.views.tarif_kind'),
     url(r'signup/$', 'user.views.signup'),
     url(r'signIn/$', 'user.views.signin'),
     url(r'signup/tourist/$', 'user.views.tourist_signup'),
     url(r'signup/tourist/tourBuilder$', 'user.views.servant_signup'),
-    url(r'userPage/tourBuilder/(P?<user_id>\d+)$', 'informing.views.builder_page'),
-    url(r'userPage/tourists/(P?<user_id>\d+)$', 'informing.views.tourist_page'),
+    url(r'userpage/(\w+)$', 'informing.views.account'),
     url(r'tourList/(P?<search_id>\d+)/$', 'present_trip.views.listTour'),
     url(r'show/(\w+)/$', 'present_trip.views.show_one_trip'),
     url(r'show/(\w+)/status/$', 'present_trip.views.show_one_trip_status'),

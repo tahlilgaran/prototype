@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block css %}
+	<link rel="stylesheet" type="text/css" href="{% static 'present_trip/css/main.css' %}">
+{% endblock %}
+{% block content %}
+        <div class="col-md-6 ">
+            <a href="$" type="button" class="btn btn-success , col-md-12 ">مشخصات کاربری</a></br>
+            <div class="box">
+                <span id="" style="font-size: 20px; color: red">
+                    هشدار ها
+                </span>
+                <ul class="nav nav-pills nav-stacked">
+                    <li>
+                        <div class="btn-group btn-group-xs" aria-label="Extra-small button group">
+                            <a href="$" type="button" class="btn btn-danger ,glyphicon glyphicon-record " style="color: #fff"></a></div>
+
+                    درصورت عدم خرید تور باداب سورت تا فردا از لیست رزور حذف خواهید شد.
+                    </li>
+                    <li>
+                        <div class="btn-group btn-group-xs" aria-label="Extra-small button group">
+                            <a href="$" type="button" class="btn btn-warning ,glyphicon glyphicon-record" style="color: #fff"></a></div>
+                        زمان برگزاری تور باداب سورت ۱۷-۱۸ تیرماه میباشد.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 , box">
+
+            <div class="dates">
+                <span id="" style="font-size: 20px;"><span class=''>&#1578;&#1740;&#1585;</span> <span class=''>&#1777;&#1779;&#1785;&#1780;</span></span>
+            </div>
+
+            <table id="" class="dayHeader , table">
+                <thead>
+                <tr>
+                    <td>&#1588</td><td>&#1740</td><td>&#1583</td><td>&#1587</td><td>&#1670</td><td>&#1662</td><td>&#1580</td>
+                </tr>
+                </thead>
+                <tbody class="jalali">
+                    <tr>
+                        <td></td><td></td><td>&#1777;</td><td>&#1778;</td><td>&#1779;</td><td>&#1780;</td><td>&#1781;</td>
+                    </tr>
+                    <tr>
+                        <td>&#1782;</td><td>&#1783;</td><td>&#1784;</td><td>&#1785;</td><td>&#1777;&#1776;</td><td>&#1777;&#1777;</td><td class="alert alert-danger">&#1777;&#1778;</td>
+                    </tr>
+                    <tr>
+                        <td>&#1777;&#1779;</td><td>&#1777;&#1780;</td><td>&#1777;&#1781;</td><td>&#1777;&#1782;</td><td class="alert alert-warning">&#1777;&#1783;</td><td class="alert alert-warning">&#1777;&#1784;</td><td>&#1777;&#1785;</td>
+                    </tr>
+                    <tr>
+                        <td>&#1778;&#1776;</td><td>&#1778;&#1777;</td><td>&#1778;&#1778;</td><td>&#1778;&#1779;</td><td>&#1778;&#1780;</td><td>&#1778;&#1781;</td><td>&#1778;&#1782;</td>
+                    </tr>
+                    <tr>
+                        <td>&#1778;&#1783;</td><td>&#1778;&#1784;</td><td>&#1778;&#1785;</td><td>&#1779;&#1776;</td><td>&#1779;&#1777;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a id="" title="ماه قبلی" class="previous" style="float:left">
+                                ماه بعدی
+            </a>
+            <a id="" title="ماه بعدی" class="next" style="float: right">
+                ماه قبلی
+            </a>
+        </div>
+
+
+    {% if username == 'gardeshgar' %}
+        <div id="down_part">
+            {#    {% if login  %}#}
+            <div class=" col-md-6 , box">
+                <h4>تور های تخفیفی</h4>
+                <img class="col-md-12 " id="promotion_pic" src="{% static 'define_and_validate_trip/img/ax5.jpg' %}">
+                <div class="col-md-12">
+                    <p>
+                        <a href="takGardesh.html" onmouseover="change_pic_1(this)"
+                           name="{% static 'define_and_validate_trip/img/ax5.jpg' %}">
+                                                       تور جنگل ابر تا ابشار مجن - شرکت گردشگری دالاهو
+                        </a>
+                    </p>
+                    <p>
+                        <a href="takGardesh.html" onmouseover="change_pic_1(this)"
+                           name="{% static 'define_and_validate_trip/img/ax6.jpg' %}">
+                                        اکو تور گیلان - ماسوله - آستارا - شرکت گردشگری مارکوپولو
+                        </a>
+                    </p>
+                    <p>
+                        <a href="takGardesh.html" onmouseover="change_pic_1(this)"
+                           name="{% static 'define_and_validate_trip/img/ax7.jpg' %}">
+                                                          هتل پنج ستاره پارمیس کیش
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <div class=" col-md-6 , box">
+                <h4>تور های تشویقی</h4>
+                <img class="col-md-12 " id="off_pic" src="{% static 'define_and_validate_trip/img/ax5.jpg' %}">
+                <div class="col-md-12">
+                    <p>
+                        <a href="takGardesh.html" onmouseover="change_pic_2(this)"
+                           name="{% static 'define_and_validate_trip/img/ax5.jpg' %}">
+                                                       تور جنگل ابر تا ابشار مجن - شرکت گردشگری دالاهو
+                        </a>
+                    </p>
+                    <p>
+                        <a href="takGardesh.html" onmouseover="change_pic_2(this)"
+                           name="{% static 'define_and_validate_trip/img/ax6.jpg' %}">
+                                        اکو تور گیلان - ماسوله - آستارا - شرکت گردشگری مارکوپولو
+                        </a>
+                    </p>
+                    <p>
+                        <a href="takGardesh.html" onmouseover="change_pic_2(this)"
+                           name="{% static 'define_and_validate_trip/img/ax7.jpg' %}">
+                                                          هتل پنج ستاره پارمیس کیش
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+
+{% endblock %}
