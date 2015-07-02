@@ -18,7 +18,7 @@ urlpatterns = [
     url(r'purchase/(P?<tour_id>\d+)/$', 'buy_cancel.views.purchase'),
     url(r'payment/(P?<id>\d+)/$', 'accounting.views.payment'),
     url(r'payment/Confirm/(P?<id>\d+)/$', 'accounting.views.confirm'),
-    url(r'tourDefine/$', 'define_and_validate_trip.views.defineTour'),
+    url(r'tourDefine/(P?<username>\w+)/$', 'define_and_validate_trip.views.tarif_kind'),
     url(r'manager/Dashboard/$', 'manager_dashboard.views.Dashboard'),
     url(r'manager/tourLists/$', 'manager_dashboard.views.tourLists'),
     url(r'manager/userLists/$', 'manager_dashboard.views.userLists'),
