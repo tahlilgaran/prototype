@@ -22,6 +22,7 @@ urlpatterns = [
    url(r'purchase/(P?<tour_id>\d+)/$', 'buy_cancel.views.purchase'),
      url(r'purchase/(\w+)/$', 'buy_cancel.views.purchase'),
      url(r'purchase/$', 'buy_cancel.views.purchase'),
+    url(r'search/(\w+)$', 'present_trip.views.start_search'),
     url(r'search/result/(\w+)/$', 'present_trip.views.search'),
     url(r'search/result/(\w+)/(\w+)$', 'present_trip.views.search'),
     url(r'purchase/(P?<tour_id>\d+)/$', 'buy_cancel.views.purchase'),

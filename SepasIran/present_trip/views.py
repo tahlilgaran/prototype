@@ -16,4 +16,7 @@ def show_one_trip_status(request , kind =''):
 def search(request , username = '' , ispack = ''):
 
     return render(request , "present_trip/search_result.html" , {'username':username , 'ispack':ispack})
+
+def start_search(request , username =''):
+    return render(request,"present_trip/search.html" , {'username':username})
 # Create your views here.
