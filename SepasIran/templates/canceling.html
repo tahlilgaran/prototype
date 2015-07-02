@@ -5,6 +5,87 @@
 {% endblock %}
 
 {% block content %}
+    <!-- ====================================================tour=========================================-->
+    {% if kind == 'service' %}
+        <div class="col-md-12 container" xmlns="http://www.w3.org/1999/html">
+            <div id="top_part" class="col-md-12">
+                   <!-- <div class="col-md-10">-->
+
+                        <h2 style="color: chocolate;font-weight: bold;">دریافت اطلاعات انصراف شما</h2>
+                        <div style="margin: 20px;margin-top: 40px;"><span style="font-weight: bold;">نوع خدمت:</span> هتل
+                            <p>
+                            <span style="font-weight: bold;">نام ارایه دهنده ی خدمت :</span>هتل پارمیس کیش
+                            </p>
+
+                            <p>
+                            <div><span style="font-weight: bold;">درجه ی اتاق: </span>A</div>
+                            <div><span style="font-weight: bold;">قیمت هر  اتاق:</span>۲۵۵۰۰۰۰ ریال</div>
+                            <div><span style="font-weight: bold;">تاریخ اقامت:</span>
+                            <input type="text" name="daterange" value="06/01/2015 - 06/07/2015" style="width:200px;"/></div>
+
+                        </div>
+
+                            </p>
+
+                        </div>
+            </div>
+             <div id="down_part" class="col-md-12" style="right: 20px;">
+                      <form action="/cancel/confirm/" >
+
+                            <p>
+                            <span style="font-weight: bold;">تعداد افراد:</span>۳
+                                    <table class="table">
+                    <thead>
+                    <tr>
+                        <td>
+                            نام و نام خانوادگی
+                        </td>
+                        <td>
+                            تعداد
+                        </td>
+                        <td>
+                            شماره تماس
+                        </td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="btn-group btn-group-xs" aria-label="Extra-small button group">
+                                    <button type="button" class="btn btn-default , glyphicon glyphicon-plus" onclick="togglelist(this)" name="1">
+                                    </button></div>
+
+فرزانه طاهونی
+                            <ul class="hidden , u1" id="list">
+                                <li>
+                                   <input type="checkbox" style="padding: 10px;"> فرزانه طاهونی</input>
+                                </li>
+
+                            </ul>
+                            </td>
+                            <td>
+                                ۳
+                            </td>
+                            <td>
+                                ۶۶۰۰۴۴۷۷
+                            </td>
+
+                    </tbody>
+                </table>
+                                 <button  type="button" class="btn btn-success"  id="rows" style=" margin: 10px" onclick='cancelService();' >وارد کردن اطلاعات انصراف</button>
+
+                                  <div  class="col-md-6"  style="font-weight: bold;margin-top: 5px;">افزایش حساب شما:<span id="confirmyy"></span></div>
+
+                            </p>
+
+                             <div id="total"></div>
+
+                         </form>
+
+    </div>
+    <div class="col-md-1">
+    </div>
+    {% endif %}
    <!-- ====================================================tour=========================================-->
     {% if kind == 'tour' %}
 <div  class="col-md-12 container">
@@ -53,7 +134,7 @@
                                 <li>
                                    <input type="checkbox" style="padding: 10px;"> فرزانه طاهونی</input>
                                 </li>
-                                <li>
+ <li>
                                     <input type="checkbox" > سبحان زعیم</input>
                                 </li>
 
@@ -122,33 +203,44 @@
 
             }
         }
-        function cancel()
+        function cancel() {
+
+            alert("به ازای انصراف از خرید برای هر نفر ۱۰ درصد هزینه مطابق با قرار داد از حساب سرپرست کسر میگردد");
+            number = document.querySelectorAll('input[type="checkbox"]:checked').length;
+
+            alert(number + "نفر برای انصراف انتخاب شده اند");
+            var cancellist = document.getElementsByTagName('input'); // get the checkbox
+            for (i = 0; i < cancellist.length; i++) // loop through it
+            {
+                // if the current state is checked, unchecked and vice-versa
+                if (cancellist[i].checked) // if its checked
+                {
+                    var remElm = cancellist[i];   // element to be removed
+                    var list = document.getElementById("list"); // also li to be removed
+                    cancellist[i].nextSibling.nodeValue = ''; // Text value set to
+                    remElm.parentNode.removeChild(remElm);
+                    ul = document.getElementsByTagName('ul')[0];
+                    li = ul.getElementsByTagName('li');
+                    ul.removeChild(li[i]);
+                    console.log("hi" + i);
+
+                }
+                var final = parseInt("2550000") * number * 0.1;
+                document.getElementById('confirmy').innerHTML = parseInt("2550000")*parseInt(number) - final + '<input type="submit" value="تایید انصراف" class="btn btn-danger" style="margin-right:10px;">';
+
+            }
+        }
+
+        function cancelService()
                      {
 
-                       alert("به ازای انصراف از خرید برای هر نفر ۱۰ درصد هزینه مطابق با قرار داد از حساب سرپرست کسر میگردد" );
-                       number=document.querySelectorAll('input[type="checkbox"]:checked').length;
+                       alert("مطابق با قرارداد به ازای انصراف از خرید هر اتاق با توجه به زمان و نوع اتاق بین ۳۰ تا ۵۰ درصد از هزینه ی اتاق کسر خواهد شد " );
+                         number = document.querySelectorAll('input[type="checkbox"]:checked').length;
 
-                         alert(number+"نفر برای انصراف انتخاب شده اند");
-                            var cancellist = document.getElementsByTagName('input'); // get the checkbox
-                            for (i=0; i<cancellist.length; i++) // loop through it
-                            {
-                            // if the current state is checked, unchecked and vice-versa
-                                    if (cancellist[i].checked) // if its checked
-                                    {
-                                    var remElm = cancellist[i];   // element to be removed
-                                        var list=document.getElementById("list"); // also li to be removed
-                                        cancellist[i].nextSibling.nodeValue = ''; // Text value set to
-                                        remElm.parentNode.removeChild(remElm);
-                                        ul = document.getElementsByTagName('ul')[0];
-                                        li = ul.getElementsByTagName('li');
-                                        ul.removeChild(li[i]);
-                                        console.log("hi"+i);
+                           var final=parseInt("2550000")*0.5;
+                           document.getElementById('confirmyy').innerHTML=  parseInt("2550000")-final+'<input type="submit" value="تایید انصراف" class="btn btn-danger" style="margin-right:10px;">' ;
 
-                                    }
-                            var final=parseInt("2550000")*number*0.1;
-                            document.getElementById('confirmy').innerHTML=  parseInt("2550000")-final+'<input type="submit" value="تایید انصراف" class="btn btn-danger" style="margin-right:10px;">' ;
 
-                            }
 
         }
 
@@ -157,4 +249,3 @@
     </script>
 
 {% endblock %}
-<!----->
