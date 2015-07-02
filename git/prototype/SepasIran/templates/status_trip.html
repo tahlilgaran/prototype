@@ -1,0 +1,273 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block css %}
+	<link rel="stylesheet" type="text/css" href="{% static 'present_trip/css/main.css' %}">
+{% endblock %}
+{% block content %}
+        <div id="top_part" class="col-md-12">
+            <div class="col-md-1"></div>
+                    <div class="col-md-10">
+                                <!-- Carousel
+                        ================================================== -->
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                          <!-- Indicators -->
+                          <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                          </ol>
+
+                          <div class="carousel-inner" role="listbox">
+                            <div class="item active , picture">
+                              <img class="first-slide" src="{% static 'define_and_validate_trip/img/t1.jpg' %}" alt="First slide">
+                              <div class="container">
+                                <div class="carousel-caption">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="item , picture">
+                              <img class="second-slide" src="{% static 'define_and_validate_trip/img/t2.jpg' %}" alt="Second slide">
+                              <div class="container">
+                                <div class="carousel-caption">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="item , picture">
+                              <img class="third-slide" src="{% static 'define_and_validate_trip/img/t3.jpg' %}" alt="Third slide">
+                              <div class="container">
+                                <div class="carousel-caption">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="item , picture">
+                              <img class="third-slide" src="{% static 'define_and_validate_trip/img/t4.jpg' %}" alt="Third slide">
+                              <div class="container">
+                                <div class="carousel-caption">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                          </a>
+                        </div><!-- /.carousel -->
+                    </div>
+                    <div class="col-md-1"></div>
+        </div>
+        <div id="down_part" class="col-md-12">
+            <h3>
+                    تور باداب سورت تا دریاچه چورت (اقامت کمپ)
+            </h3>
+            <div class="box , col-md-12">
+                <h4>
+                    لیست خرید
+                </h4>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <td>
+                            نام و نام خانوادگی
+                        </td>
+                        <td>
+                            تعداد
+                        </td>
+                        <td>
+                            شماره تماس
+                        </td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="btn-group btn-group-xs" aria-label="Extra-small button group">
+                                    <button type="button" class="btn btn-default , glyphicon glyphicon-plus" onclick="togglelist(this)" name="1">
+                                    </button></div>
+فرزانه طاهونی
+                            <ul class="hidden , u1">
+                                <li>
+                                    امیر زعیم
+                                </li>
+                                <li>
+                                    سبحان زعیم
+                                </li>
+                                <li>
+                                    سحر زعیم
+                                </li>
+                            </ul>
+                            </td>
+                            <td>
+۳
+                            <ul class="nav nav-pills nav-stacked , hidden , u1">
+                                <li>
+                                    ۰۰۱۳۴۵۶۷۵۳
+                                </li>
+                                <li>
+                                    ۰۰۳۴۵۶۷۸۵۵
+                                </li>
+                                <li>
+                                    ۰۰۱۶۶۰۸۴۷۱
+                                </li>
+                            </ul>
+                            </td>
+                            <td>
+۶۶۰۰۴۴۷۷
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="btn-group btn-group-xs" aria-label="Extra-small button group">
+                                    <button type="button" class="btn btn-default , glyphicon glyphicon-plus" onclick="togglelist(this)" name="2">
+                                    </button></div>
+مریم زاکانی
+                            <ul class="hidden , u2">
+                                <li>
+   فرزانه طاهونی
+                                </li>
+                                <li>
+     مریم زاکانی
+                                </li>
+                            </ul>
+                            </td>
+                            <td>
+۲
+                            <ul class="nav nav-pills nav-stacked , hidden , u2">
+                                <li>
+                                    ۰۰۳۴۵۶۷۸۵۵
+                                </li>
+                                <li>
+                                    ۰۰۱۶۶۰۸۴۷۱
+                                </li>
+                            </ul>
+                            </td>
+                            <td>
+                                ۶۶۰۰۵۵۶۶
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="btn-group btn-group-xs" aria-label="Extra-small button group">
+                                    <button type="button" class="btn btn-default , glyphicon glyphicon-plus" onclick="togglelist(this)" name="3">
+                                    </button></div>
+نیلوفر محزون
+                            <ul class="hidden , u3">
+                                <li>
+                نیلوفر محزون
+                                </li>
+                            </ul>
+                            </td>
+                            <td>
+۱
+                            <ul class="nav nav-pills nav-stacked , hidden , u3">
+                                <li>
+                                    ۰۰۱۶۶۰۸۴۷۱
+                                </li>
+                            </ul>
+                            </td>
+                            <td>
+۶۶۰۰۷۷۸۶
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+مجموع
+                            </td>
+                            <td>
+۶
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="box , col-md-12">
+                <h4>
+لیست رزرو
+                </h4>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <td>
+                            نام و نام خانوادگی
+                        </td>
+                        <td>
+                            تعداد
+                        </td>
+                        <td>
+ شماره تماس
+                        </td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="btn-group btn-group-xs" aria-label="Extra-small button group">
+                                    <button type="button" class="btn btn-default , glyphicon glyphicon-plus" onclick="togglelist(this)" name="4">
+                                    </button></div>
+یگانه غیور
+                            <ul class="hidden , u4">
+                                <li>
+        یگانه غیور
+                                </li>
+                                <li>
+     مریم زاکانی
+                                </li>
+                            </ul>
+                            </td>
+                            <td>
+۲
+                            <ul class="nav nav-pills nav-stacked , hidden , u4">
+                                <li>
+                                    ۰۰۳۴۵۶۷۸۵۵
+                                </li>
+                                <li>
+                                    ۰۰۱۶۶۰۸۴۷۱
+                                </li>
+                            </ul>
+                            </td>
+                            <td>
+ ۲۲۴۴۵۵۳۲
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+مجموع
+                            </td>
+                            <td>
+۲
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+{% endblock %}
+
+
+{% block script %}
+    <script>
+        function togglelist(a){
+            class_number = a.name;
+            list = document.querySelectorAll('.u'+class_number);
+            if(a.className === 'btn btn-default , glyphicon glyphicon-minus'){
+                console.log('hihi');
+                a.setAttribute("class","btn btn-default , glyphicon glyphicon-plus");
+                for(var i=0 ; i < list.length ; i++){
+                    list[i].setAttribute("class","hidden , nav nav-pills nav-stacked , u"+class_number);
+                }
+
+            }else
+            if(a.className === 'btn btn-default , glyphicon glyphicon-plus') {
+                a.setAttribute("class","btn btn-default , glyphicon glyphicon-minus");
+                for(var i=0 ; i < list.length ; i++){
+                    list[i].setAttribute("class","nav nav-pills nav-stacked , u"+class_number);
+                }
+
+            }
+        }
+    </script>
+{% endblock %}

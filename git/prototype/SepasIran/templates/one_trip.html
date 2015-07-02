@@ -136,23 +136,6 @@
                 </table>
             </div>
         </div>
-    <div class="col-md-6"  style="float: left; direction: ltr">
-        <button type="button" class="btn btn-link">بازگشت</button>
-        <form action="/cancel/service/" method="POST">
-            {% csrf_token %}
-            <input type="submit" class="btn btn-danger" value="انصراف" />
-        </form>
-        <form action="/reserve/service/" method="POST">
-            {% csrf_token %}
-            <input type="submit" class="btn btn-warning" value="رزرو" />
-        </form>
-
-
-        <form action="/purchase/service/" method="POST">
-            {% csrf_token %}
-            <input type="submit" class="btn btn-success" value="خرید" />
-        </form>
-    </div>
     {% endif %}
 {#*********** ========================= tour =========================== **************#}
     {% if kind == 'tour'%}
@@ -276,40 +259,15 @@
                 </table>
             </div>
         </div>
-
-    <div class="col-md-6"  style="float: left; direction: ltr">
-       <!--
-        <button type="button" class="btn btn-danger">انصراف</button>
-          <button type="button" class="btn btn-warning">رزرو</button>
-          <!-- <button type="submit" class="btn btn-success">خرید</button>-->-->
-        <span><button type="button" class="btn btn-link">بازگشت</button>
-        <form action="/cancel/tour/" method="POST">
-            {% csrf_token %}
-            <input type="submit" class="btn btn-danger" value="انصراف" />
-        </form>
-        <form action="/reserve/tour/" method="POST">
-            {% csrf_token %}
-            <input type="submit" class="btn btn-warning" value="رزرو" />
-        </form>
-
-
-        <form action="/purchase/tour/" method="POST">
-            {% csrf_token %}
-            <input type="submit" class="btn btn-success" value="خرید" />
-        </form></span>
-    </div>
-
     {% endif %}
 {#*********** ========================= pack =========================== **************#}
     {% if kind == 'pack' %}
-<div class="col-md-6"  style="float: left; direction: ltr">
+    {% endif %}
+
+    <div class="col-md-6"  style="float: left; direction: ltr">
         <button type="button" class="btn btn-link">بازگشت</button>
         <button type="button" class="btn btn-danger">انصراف</button>
         <button type="button" class="btn btn-warning">رزرو</button>
         <button type="button" class="btn btn-success">خرید</button>
     </div>
-
-    {% endif %}
-
-
 {% endblock %}

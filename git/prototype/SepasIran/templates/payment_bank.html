@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>درگاه بانک</title>
+    <style>
+        body {
+            margin-top:20px;
+            background-color:#FFE4C4;
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+</head>
+<body style="background-color:#FFE4C4;font-family: 'B Mitra';">
+<form action="/payment/confirm/" method="POST">
+    <div class="container" style="direction: rtl" >
+    <div class='row'>
+        <div class='col-md-4'></div>
+        <div class='col-md-4'>
+          <script src='https://js.stripe.com/v2/' type='text/javascript'></script>
+          <form accept-charset="UTF-8" action="/" class="require-validation" data-cc-on-file="false" data-stripe-publishable-key="pk_bQQaTxnaZlzv4FnnuZ28LFHccVSaj" id="payment-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓" /><input name="_method" type="hidden" value="PUT" /><input name="authenticity_token" type="hidden" value="qLZ9cScer7ZxqulsUWazw4x3cSEzv899SP/7ThPCOV8=" /></div>
+            <div class='form-row'>
+              <div class='col-xs-12 form-group required' style="margin-top: 80px;">
+                <label class='control-label'>شماره ی کارت</label>
+                 <input class='form-control' size='4' type='text'>
+              </div>
+            </div>
+            <div class='form-row'>
+              <div class='col-xs-12 form-group card required'>
+                <label class='control-label'>رمز دوم</label>
+                <input type="password" autocomplete='off' class='form-control card-number' size='20' type='text'>
+              </div>
+            </div>
+            <div class='form-row'>
+
+              <div class='col-xs-4 form-group expiration required'>
+                <label class='control-label'></label>
+                <input class='form-control card-expiry-year' placeholder='سال' size='4' type='text'>
+              </div>
+              <div class='col-xs-4 form-group expiration required'>
+                <label class='control-label'>تاریخ انقضا</label>
+                <input class='form-control card-expiry-month' placeholder='ماه' size='2' type='text'>
+              </div>
+              <div class='col-xs-4 form-group cvc required'>
+                <label class='control-label'>CVV2</label>
+                <input autocomplete='off' class='form-control card-cvc'  size='4' type='text'>
+              </div>
+
+
+            </div>
+            <div class='form-row'>
+              <div class='col-md-12'>
+                <div class='form-control total btn btn-info' style="background-color:#FF8C00">
+                  مبلغ کل پرداختی:
+                  <span class='amount'>۸۰۰۰۰۰۰ریال</span>
+                </div>
+              </div>
+            </div>
+            <div class='form-row'>
+              <div class='col-md-12 form-group'>
+                <input class='form-control btn btn-primary submit-button' type='submit' value="پرداخت" style=" margin-top: 10px;
+;background-color:#CD6600;"/>
+              </div>
+            </div>
+            <div class='form-row'>
+              <div class='col-md-12 error form-group hide'>
+                <div class='alert-danger alert'>
+                  Please correct the errors and try again.
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class='col-md-4'></div>
+    </div>
+</div>
+
+</form>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<!--<script type="javascript">
+    $(function() {
+  $('form.require-validation').bind('submit', function(e) {
+    var $form         = $(e.target).closest('form'),
+        inputSelector = ['input[type=email]', 'input[type=password]',
+                         'input[type=text]', 'input[type=file]',
+                         'textarea'].join(', '),
+        $inputs       = $form.find('.required').find(inputSelector),
+        $errorMessage = $form.find('div.error'),
+        valid         = true;
+
+    $errorMessage.addClass('hide');
+    $('.has-error').removeClass('has-error');
+    $inputs.each(function(i, el) {
+      var $input = $(el);
+      if ($input.val() === '') {
+        $input.parent().addClass('has-error');
+        $errorMessage.removeClass('hide');
+        e.preventDefault(); // cancel on first error
+      }
+    });
+  });
+});
+
+$(function() {
+  var $form = $("#payment-form");
+
+  $form.on('submit', function(e) {
+    if (!$form.data('cc-on-file')) {
+      e.preventDefault();
+      Stripe.setPublishableKey($form.data('stripe-publishable-key'));
+      Stripe.createToken({
+        number: $('.card-number').val(),
+        cvc: $('.card-cvc').val(),
+        exp_month: $('.card-expiry-month').val(),
+        exp_year: $('.card-expiry-year').val()
+      }, stripeResponseHandler);
+    }
+  });
+
+  function stripeResponseHandler(status, response) {
+    if (response.error) {
+      $('.error')
+        .removeClass('hide')
+        .find('.alert')
+        .text(response.error.message);
+    } else {
+      // token contains id, last4, and card type
+      var token = response['id'];
+      // insert the token into the form so it gets submitted to the server
+      $form.find('input[type=text]').empty();
+      $form.append("<input type='hidden' name='reservation[stripe_token]' value='" + token + "'/>");
+      $form.get(0).submit();
+    }
+</script>-->
+</html>
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>درگاه بانک</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!--<link rel="stylesheet" type="text/css" href="">-->
+<!--</head>
+<body>
+    <form>
+        <div class="col-md-9,container">شماره ی کارت :
+            <p><input type="text" /><input type="text" /><input type="text" /><input type="text" />
+            </p>
+        </div>
+
+        <div class="col-md-2,container">
+            ccv2:<input type="text" />
+        </div>
+
+        <div class="col-md-2,container">
+            رمز دوم:<input type="password" />
+        </div>
+
+        <div class="col-md-4,container">
+            تاریخ انقضا :
+             <input type="text" />ماه
+             <input type="text" />سال
+
+        </div>
+        <div>
+             <input type="submit" href="confirm.html">تایید پرداخت </input>
+        </div>
+    </form>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</html>-->
