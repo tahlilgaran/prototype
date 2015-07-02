@@ -15,13 +15,13 @@ def reserve(request ,kind=''):
 
     if kind == 'service':
         return render(request , "information_of_reserver_service.html")
-    elif kind == 'tour':
+    elif kind=='confirm':
+         return render(request, "reservation-status.html")
+    elif kind== 'tour':
         return render(request, "information_of_reserver_tour.html" )
 
-def confirm(request):
-    c = {}
-    c.update(csrf(request))
+#def confirmreserve(request):
+
    #  c.update(csrf(request))
 
    # return render_to_response("reservation-status.html", c)
-    return render(request, "reservation-status.html")

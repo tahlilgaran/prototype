@@ -9,7 +9,7 @@
             <div id="top_part" class="col-md-12">
                    <!-- <div class="col-md-10">-->
 
-                        <h2 style="color: chocolate;font-weight: bold;">درسافت اطلاعات رزرو شما</h2>
+                        <h2 style="color: chocolate;font-weight: bold;">دریافت اطلاعات رزرو شما</h2>
                         <div style="margin: 20px;margin-top: 40px;"><span style="font-weight: bold;">نام شرکت گردشگری تور:</span> دالاهو
                             <p>
                             <span style="font-weight: bold;">نام تور :</span>تور باداب سورت تا دریاچه چورت (اقامت کمپ)
@@ -22,7 +22,8 @@
                         </div>
             </div>
              <div id="down_part" class="col-md-12" style="right: 20px;">
-                         <form action="/reserve/confirm/" method="POST" >
+                         <form action="/reserve/confirm/" method="POST">
+
                             {%  csrf_token %}
                             <p>
                             <span style="font-weight: bold;">تعداد افراد:</span>
@@ -30,6 +31,7 @@
                                  <button  type="button" class="btn btn-success" value="ورود اطلاعات " id="rows" style=" margin: 10px" onclick='createTable();' >وارد کردن اطلاعات</button>
                                     <p> توجه : اولین نفری که نام او در فرم اطلاعات رزرو کنندگان وارد میشود به عنوان سرپرست محسوب میگردد</p>
                                   <div id="t" class="col-md-12" ></div>
+                                    <input type="submit" class="btn btn-success" value="تایید رزرو" style="float:left;margin-left:20px;"/>
                              </p>
 
                              <div id="total"></div>
@@ -67,7 +69,7 @@
                          var tfooter = '</table>';
                           document.getElementById('t').innerHTML = theader + tbody + tfooter;
 
-                          document.getElementById('total').innerHTML = '<div style="top: 100px;">شما به مدت یک هفته فرصت دارید رزرو خود را بخرید </div><input type="submit" class="btn btn-success" value="تایید رزرو" style="float:left;margin-left:20px;"/>';
+                          document.getElementById('total').innerHTML = '<div style="top: 100px;">شما به مدت یک هفته فرصت دارید رزرو خود را بخرید </div>';
                      }
 
     </script>

@@ -30,29 +30,8 @@
                                  <button  type="button" class="btn btn-success" value="ورود اطلاعات " id="rows" style=" margin: 10px" onclick='createTable();' >وارد کردن اطلاعات</button>
                                     <p> توجه : اولین نفری که نام او در فرم اطلاعات خریداران وارد میشود سرپرست محسوب میگردد</p>
                                   <div id="t" class="col-md-12" ></div>
-                    {#                 <script type="text/javascript">#}
-                    {#                     function createTable()#}
-                    {#                     {#}
-                    {#                         var num_rows = ducument.getElementById('rows').value;#}
-                    {#                         var num_cols = 4;#}
-                    {#                         var theader = '<table border="1">\n';#}
-                    {#                         var tbody =#}
-                    {#                                 '<td>نام</td><td>نام خانوادگی</td><td>شماره ی ملی</td>';#}
-                    {#                         for( var i=0; i<num_rows;i++)#}
-                    {#                         {#}
-                    {#                             tbody += '<tr>';#}
-                    {#                             for( var j=0; j<num_cols;j++)#}
-                    {#                             {#}
-                    {#                                 tbody += '<td>';#}
-                    {#                                 tbody += '<input type="text">';#}
-                    {#                                 tbody += '</td>'#}
-                    {#                             }#}
-                    {#                             tbody += '</tr>\n';#}
-                    {#                         }#}
-                    {#                         var tfooter = '</table>';#}
-                    {#                         ducument.getElementById('wrapper').innerHTML = theader + tbody + tfooter;#}
-                    {#                     }#}
-                    {#                 </script>#}
+                                    <div style="top: 100px;font-weight: bold;">جمع کل مبلغ پرداختی:<span id="final"></span>ریال</div>
+
 
                             </p>
 
@@ -90,8 +69,8 @@
                          }
                          var tfooter = '</table>';
                           document.getElementById('t').innerHTML = theader + tbody + tfooter;
-
-                          document.getElementById('total').innerHTML = '<div style="top: 100px;">جمع کل مبلغ پرداختی :۷۶۵۰۰۰۰ ریال</div><input type="submit" class="btn btn-success" value="تایید خرید" style="float:left;margin-left:20px;"/>';
+                          document.getElementById('final').innerHTML=parseInt(num_rows)*2550000;
+                          document.getElementById('total').innerHTML = '<input type="submit" class="btn btn-success" value="تایید خرید" style="float:left;margin-left:20px;"/>';
                      }
 
     </script>

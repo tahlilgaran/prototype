@@ -8,3 +8,13 @@ def payment(request):
 def confirm(request):
 
     return render(request, "transaction-status.html")
+
+def cancel(request ,kind=''):
+
+    if kind == 'service':
+        return render(request , "canceling.html", {'kind':kind})
+    elif kind == 'tour':
+        return render(request, "canceling.html" , {'kind':kind})
+    elif kind == 'confirm':
+        return render(request, "canceling.html" , {'kind':kind})
+
