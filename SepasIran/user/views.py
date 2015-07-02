@@ -64,3 +64,8 @@ def tourist_profile(request,username):
     return render(request, "tourist_profile.html",{
         'username':username,
     })
+def tourbuilder_profile(request,username):
+
+    return render(request, "tourbuilder_profile.html",{
+        'username':username,
+    })

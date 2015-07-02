@@ -19,6 +19,7 @@ urlpatterns = [
     url(r'signup/tourBuilder/(\w+)$', 'user.views.servant_signup'),
     url(r'editprofile/tourist/(\w+)$','user.views.edit_tourist'),
     url(r'profile/tourist/(\w+)$','user.views.tourist_profile'),
+    url(r'profile/tourbuilder/(\w+)$','user.views.tourbuilder_profile'),
     url(r'editprofile/tourbuilder/(\w+)$','user.views.edit_tourbuilder'),
     url(r'userpage/(\w+)$', 'informing.views.account'),
     url(r'show/(\w+)/$', 'present_trip.views.show_one_trip'),
