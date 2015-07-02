@@ -1,10 +1,9 @@
-
 from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
     url(r'home/$', 'present_trip.views.home'),
-    url(r'home/username/$' , 'present_trip.views.home_login'),
+    url(r'home/username/$', 'present_trip.views.home_login'),
     url(r'help/$', 'tourism.views.help'),
     url(r'signup/$', 'user.views.signup'),
     url(r'signIn/$', 'user.views.signin'),
@@ -16,19 +15,19 @@ urlpatterns = [
     url(r'show/(\w+)/$', 'present_trip.views.show_one_trip'),
     url(r'show/(\w+)/status/$', 'present_trip.views.show_one_trip_status'),
     url(r'reserve/(P?<tour_id>\d+)/$', 'buy_cancel.views.reserve'),
-     url(r'reserve/(\w+)/$', 'buy_cancel.views.reserve'),
-     url(r'reserve/confirm/$', 'buy_cancel.views.confirm'),
-   url(r'purchase/(P?<tour_id>\d+)/$', 'buy_cancel.views.purchase'),
-     url(r'purchase/(\w+)/$', 'buy_cancel.views.purchase'),
-     url(r'purchase/$', 'buy_cancel.views.purchase'),
+    url(r'reserve/(\w+)/$', 'buy_cancel.views.reserve'),
+    url(r'reserve/confirm/$', 'buy_cancel.views.confirm'),
+    url(r'purchase/(P?<tour_id>\d+)/$', 'buy_cancel.views.purchase'),
+    url(r'purchase/(\w+)/$', 'buy_cancel.views.purchase'),
+    url(r'purchase/$', 'buy_cancel.views.purchase'),
     url(r'search/result/$', 'present_trip.views.search'),
     url(r'purchase/(P?<tour_id>\d+)/$', 'buy_cancel.views.purchase'),
     url(r'payment/(P?<id>\d+)/$', 'accounting.views.payment'),
     url(r'payment/Confirm/(P?<id>\d+)/$', 'accounting.views.confirm'),
     url(r'^tourDefine/(P?<username>\w+)/$', 'define_and_validate_trip.views.tarif_kind'),
-     url(r'payment/$', 'accounting.views.payment'),
+    url(r'payment/$', 'accounting.views.payment'),
     url(r'payment/confirm/(P?<id>\d+)/$', 'accounting.views.confirm'),
-     url(r'payment/confirm/$', 'accounting.views.confirm'),
+    url(r'payment/confirm/$', 'accounting.views.confirm'),
     url(r'manager/Dashboard/$', 'manager_dashboard.views.Dashboard'),
     url(r'manager/tourLists/$', 'manager_dashboard.views.tourLists'),
     url(r'manager/userLists/$', 'manager_dashboard.views.userLists'),

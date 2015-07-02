@@ -1,0 +1,71 @@
+.wrapper{
+    margin-top: 0px;
+}
+.box {
+    /*border: 3px solid #eee;*/
+    /*padding: 15px;*/
+    /*margin-top: 30px;*/
+    /*margin-bottom: 15px;*/
+    /*margin-left: 30px;*/
+    /*margin-right: 30px;*/
+    /*height: 250px;*/
+    border-radius: 3%;
+    background-color: #dee5e3;
+    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px ;
+
+}
+.gardeshgar_img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 10px;
+}
+.tour_img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10%;
+    margin: 10px;
+}
+.tour_detail_box {
+    border-radius: 10%;
+    margin: 10px;
+    background-color: #f2f9f7;
+    display:inline-block;
+}
+
+.tour{
+    background-color: #f2f9f7;
+    border-radius: 5%;
+    margin-top: 10px;
+}
+
+.right-sidebar{
+   position: fixed;
+    width: 25%;
+    top: 50px;
+    bottom: 0px;
+    right: 0px;
+    overflow: auto;
+    padding-left: 20px;
+    text-align: center;
+    background-color: gray;
+}
+
+.gardeshgar_name_box {
+
+    border-radius: 5px;
+    /*padding: 2px;*/
+    /*margin: 10px;*/
+    display:inline-block;
+}
+
+
+.gardeshgar_comment_box {
+    background-color: #f2f9f7;
+    border-radius: 5px;
+    padding: 10px;
+    /*margin: 10px;*/
+}
+
