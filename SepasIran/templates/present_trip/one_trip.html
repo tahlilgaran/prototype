@@ -263,13 +263,22 @@
     {% endif %}
 {#*********** ========================= pack =========================== **************#}
     {% if kind == 'pack' %}
+        <div>
+        این قسمت طراحی نشده است.
+        </div>
     {% endif %}
 
+    {% if username != '' %}
     <div class="col-md-6"  style="float: left; direction: ltr">
         <a type="button" href="/cancel/{{ kind }}/" class="btn btn-danger">انصراف</a>
         <a type="button" href="/reserve/{{ kind }}/" class="btn btn-warning">رزرو</a>
         <a type="button" href="/purchase/{{ kind }}/" class="btn btn-success">خرید</a>
     </div>
+    {% else %}
+        <div style="color: red">
+        برای خرید باید وارد سایت شوید.
+        </div>
+    {% endif %}
 
 
 {% endblock %}
