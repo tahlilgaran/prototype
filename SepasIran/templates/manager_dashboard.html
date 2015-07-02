@@ -6,6 +6,7 @@
 
 {% block manager_content %}
     <div class="finish_nav , rtl ">
+{% block content_dashboard %}
     <div class="box col-md-3">
         <table>
             <tr>
@@ -161,11 +162,13 @@
             </table>
         </div>
     </div>
-
+{% endblock content_dashboard %}
 
     <div class="col-md-3 right-sidebar">
-        <div class="col-md-12" style="height: 300px">
+        <div class="col-md-12">
             <strong>
+                <img class="logo" src="{% static 'manager_dashboard/image/sepas_logo.jpg' %}">
+                <br>
 داشبورد مدیریتی سامانه سپاس ایران
 </strong>
         </div>
@@ -216,6 +219,27 @@
                 <tr>
                     <td>
                         درصد قراردادها
+                    </td>
+                </tr>
+            </table>
+        </div>
+  <div class="col-md-12 ">
+            <hr>
+                     <table>
+                <tr>
+                    <td>
+                        <a href="http://127.0.0.1:8000/manager/tourLists">
+                    تورهای در حال اجرا</a></td>
+                </tr>
+
+                <tr>
+                    <td><a href="http://127.0.0.1:8000/manager/tourRating">
+                        رتبه بندی تورها
+                    </a></td>
+                </tr>
+                        <tr>
+                    <td>
+                        نظرات برخط گردشگران
                     </td>
                 </tr>
             </table>

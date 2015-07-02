@@ -53,6 +53,16 @@
     background-color: gray;
 }
 
+.tour_wrapper{
+    margin-left: 300px;
+}
+
+
+.logo{
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
 .gardeshgar_name_box {
 
     border-radius: 5px;
@@ -67,5 +77,38 @@
     border-radius: 5px;
     padding: 10px;
     /*margin: 10px;*/
+}
+
+a:link {
+    color: #040404;
+}
+
+/* visited link */
+a:visited {
+    color: #040404;
+}
+
+/* mouse over link */
+a:hover {
+    color: #bac1c0;
+}
+
+/* selected link */
+a:active {
+    color: #040404;
+}
+
+.tour_image_large{
+    width: 150px;
+    height: 150px;
+    border-radius: 10%;
+    margin: 10px;
+}
+
+.tour_image_med{
+    width: 100px;
+    height: 100px;
+    border-radius: 10%;
+    margin: 10px;
 }
 

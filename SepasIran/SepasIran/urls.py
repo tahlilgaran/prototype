@@ -30,6 +30,7 @@ urlpatterns = [
     url(r'payment/confirm/$', 'accounting.views.confirm'),
     url(r'manager/Dashboard/$', 'manager_dashboard.views.Dashboard'),
     url(r'manager/tourLists/$', 'manager_dashboard.views.tourLists'),
+    url(r'manager/tourRating/$', 'manager_dashboard.views.tourRating'),
     url(r'manager/userLists/$', 'manager_dashboard.views.userLists'),
     url(r'manager/paymentsList/$', 'manager_dashboard.views.paymentLists'),
     url(r'manager/OnlineComments/$', 'manager_dashboard.views.onlineComments'),
