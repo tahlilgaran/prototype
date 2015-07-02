@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'manager_dashboard/css/main.css' %}">
+{% endblock %}
+
+{% block manager_content %}
+
+    <div class="box col-md-3">
+        <table>
+            <tr>
+                <td> نظرات برخط کاربران</td>
+            </tr>
+            <tr>
+                <td>
+                    <div >
+                <span>
+                    <img class="gardeshgar_img" src="{% static 'manager_dashboard/image/girl.jpg' %}">
+                </span>
+                <span class="gardeshgar_name_box">
+فرزانه مشهدی :
+                </span>
+                        <div class="col-md-12 gardeshgar_comment_box">
+                            تور ما خیلی خوب نیست ، مسئولمون همش میره این ور و اون ور ، لطفا رسیدگی کنید
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    خوبی
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="box col-md-5">
+        world
+    </div>
+
+
+    <div class="box col-md-3">
+
+    </div>
+{% endblock manager_content %}
+
+
+{% block script %}
+{% endblock %}
