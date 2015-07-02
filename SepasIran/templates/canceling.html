@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block css %}
+	<link rel="stylesheet" type="text/css" href={% static 'buy/css/main.css' %}>
+{% endblock %}
+
+{% block content %}
+   <!-- ====================================================tour=========================================-->
+    {% if kind == 'tour' %}
+<div  class="col-md-12 container">
+            <div id="top_part" class="col-md-12">
+                   <!-- <div class="col-md-10">-->
+
+                        <h2 style="color: chocolate;font-weight: bold;">دریافت اطلاعات انصراف شما </h2>
+                        <div style="margin: 20px;margin-top: 40px;"><span style="font-weight: bold;">نام شرکت گردشگری تور:</span> دالاهو
+                            <p>
+                            <span style="font-weight: bold;">نام تور :</span>تور باداب سورت تا دریاچه چورت (اقامت کمپ)
+                            </p>
+
+                            <p>
+                            <span style="font-weight: bold;">قیمت برای هر نفر:</span><span id="cost">۲۵۵۰۰۰۰</span>ریال
+                            </p>
+
+                        </div>
+            </div>
+             <div id="down_part" class="col-md-12" style="right: 20px;">
+                         <form action="/cancel/confirm/" >
+
+                            <p>
+                            <span style="font-weight: bold;">تعداد افراد:</span>۳
+                                    <table class="table">
+                    <thead>
+                    <tr>
+                        <td>
+                            نام و نام خانوادگی
+                        </td>
+                        <td>
+                            تعداد
+                        </td>
+                        <td>
+                            شماره تماس
+                        </td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="btn-group btn-group-xs" aria-label="Extra-small button group">
+                                    <button type="button" class="btn btn-default , glyphicon glyphicon-plus" onclick="togglelist(this)" name="1">
+                                    </button></div>
+فرزانه طاهونی
+                            <ul class="hidden , u1" id="list">
+                                <li>
+                                   <input type="checkbox" style="padding: 10px;"> فرزانه طاهونی</input>
+                                </li>
+                                <li>
+                                    <input type="checkbox" > سبحان زعیم</input>
+                                </li>
+
+                                <li>
+                                  <input type="checkbox">سحر زعیم</input>
+                                </li>
+                            </ul>
+                            </td>
+                            <td>
+                                ۳
+                            </td>
+                            <td>
+                                ۶۶۰۰۴۴۷۷
+                            </td>
+
+                    </tbody>
+                </table>
+                                 <button  type="button" class="btn btn-success"  id="rows" style=" margin: 10px" onclick='cancel();' >وارد کردن اطلاعات انصراف</button>
+
+                                  <div  class="col-md-6"  style="font-weight: bold;margin-top: 5px;">افزایش حساب شما:<span id="confirmy"></span></div>
+
+                            </p>
+
+                             <div id="total"></div>
+
+                         </form>
+
+    </div>
+    <div class="col-md-1">
+    </div>
+{% endif %}
+   <!-- =============================================confirm==============================================-->
+    {% if kind == 'confirm' %}
+    <div class="col-md-8">
+        <p>
+        عملیات انصراف با موفقیت انجام شد
+        </p>
+        <p class="random-number">
+            کد پیگیری :۱۹۷۶۰۴۸۹۷۸
+        </p>
+        <p style="font-weight: bold;">حساب شما به روز رسانی شد.
+        </p>
+
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block script %}
+    <script type="text/javascript">
+         function togglelist(a){
+            class_number = a.name;
+            list = document.querySelectorAll('.u'+class_number);
+            if(a.className === 'btn btn-default , glyphicon glyphicon-minus'){
+                console.log('hihi');
+                a.setAttribute("class","btn btn-default , glyphicon glyphicon-plus");
+                for(var i=0 ; i < list.length ; i++){
+                    list[i].setAttribute("class","hidden , nav nav-pills nav-stacked , u"+class_number);
+                }
+
+            }else
+            if(a.className === 'btn btn-default , glyphicon glyphicon-plus') {
+                a.setAttribute("class","btn btn-default , glyphicon glyphicon-minus");
+                for(var i=0 ; i < list.length ; i++){
+                    list[i].setAttribute("class","nav nav-pills nav-stacked , u"+class_number);
+                }
+
+            }
+        }
+        function cancel()
+                     {
+
+                       alert("به ازای انصراف از خرید برای هر نفر ۱۰ درصد هزینه مطابق با قرار داد از حساب سرپرست کسر میگردد" );
+                       number=document.querySelectorAll('input[type="checkbox"]:checked').length;
+
+                         alert(number+"نفر برای انصراف انتخاب شده اند");
+                            var cancellist = document.getElementsByTagName('input'); // get the checkbox
+                            for (i=0; i<cancellist.length; i++) // loop through it
+                            {
+                            // if the current state is checked, unchecked and vice-versa
+                                    if (cancellist[i].checked) // if its checked
+                                    {
+                                    var remElm = cancellist[i];   // element to be removed
+                                        var list=document.getElementById("list"); // also li to be removed
+                                        cancellist[i].nextSibling.nodeValue = ''; // Text value set to
+                                        remElm.parentNode.removeChild(remElm);
+                                        ul = document.getElementsByTagName('ul')[0];
+                                        li = ul.getElementsByTagName('li');
+                                        ul.removeChild(li[i]);
+                                        console.log("hi"+i);
+
+                                    }
+                            var final=parseInt("2550000")*number*0.1;
+                            document.getElementById('confirmy').innerHTML=  parseInt("2550000")-final+'<input type="submit" value="تایید انصراف" class="btn btn-danger" style="margin-right:10px;">' ;
+
+                            }
+
+        }
+
+
+
+    </script>
+
+{% endblock %}
+<!----->
