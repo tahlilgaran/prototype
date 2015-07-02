@@ -12,31 +12,53 @@
 <p>
     لطفا نوع گردشی که میخواهید در سامانه سپاس ایران به فروش بگذارید انتخاب نمایید:
 </p>
-
+<div class="col-md-11">
+    <div class="col-md-4"></div>
+    <form method="post">
+        {% csrf_token %}
+    <div class="col-md-8">
 <div class="radio">
-  <label><input type="radio" name="optradio">
-  تور
+  <label><input type="radio" value=1 name="optradio"><p style="display: inline-block">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; تور
+      </p>
   </label>
 </div>
 <div class="radio">
   <label><input type="radio" name="optradio">
-  هتل
+  <p style="display: inline-block">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; هتل
+      </p>
   </label>
 </div>
-<div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>
-  رستوران
+<div class="radio">
+  <label><input type="radio" name="optradio">
+  <p style="display: inline-block">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; رستوران
+      </p>
   </label>
     </div>
-    <div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>
-هواپیما
+    <div class="radio">
+  <label><input type="radio" name="optradio">
+    <p style="display: inline-block">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; هواپیما
+      </p>
   </label>
         </div>
-   <div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>
-قطار
+   <div class="radio">
+  <label><input type="radio" name="optradio">
+    <p style="display: inline-block">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; قطار
+      </p>
   </label>
+</div>
+</div>
+<div class="col-md-10 , pull-right">
+    <input class="btn btn-success" type="submit"  name="next" value="گام بعد">
+    <a class="btn btn-danger" href="\userpage\tourBuilder\" name ="cancel">
+    انصراف
+    </a>
+</div>
+        </form>
 </div>
 
 {% endblock %}

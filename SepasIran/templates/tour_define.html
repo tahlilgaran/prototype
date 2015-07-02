@@ -1,0 +1,478 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block css %}
+	<link rel="stylesheet" type="text/css" href="{% static 'define_and_validate_trip/css/main.css' %}">
+{% endblock %}
+{% block content %}
+
+    <h1>
+    تعریف تور
+    </h1>
+
+    <p>
+    لطفا اطلاعات زیر را در مورد تور خود با دقت تکمیل فرمایید.<br>
+        پر کردن فیلدهای ستاره دار الزامی می باشد.<br>
+    در صورت انتخاب یک وسیله نقلیه یا محل اقامت باید نام شرکت یا نوع آن نوشته شود.<br>
+    </p>
+
+    <div class="col-md-11">
+        <form method="post" action="tour_define_confirm.html" enctype="multipart/form-data">
+            <div class="col-md-12 , form-group">
+                <div class="col-md-6"></div>
+                <div class="col-md-4">
+                        دالاهو
+                    </div>
+                    <label  class="col-md-2 ">
+                نام شرکت
+                    </label>
+
+
+            </div>
+            <div class="col-md-12 , form-group">
+                <div class="col-md-6"></div>
+                <div class="col-md-4">
+                    <select class="form-control">
+                      <option>
+                          تفریحی
+                      </option>
+                      <option>
+                          زیارتی
+                      </option>
+                      <option>
+                          طبیعت گردی
+                      </option>
+
+                    </select>
+                    <span class="error"></span>
+                    </div>
+                    <label  class="col-md-2 ">
+*نوع تور
+                    </label>
+
+
+            </div>
+            <div class="col-md-12 , form-group">
+                <div class="col-md-6"></div>
+                <div class="col-md-4">
+                        <input type="text" class="form-control" id="des" placeholder="نام شهر مقصد">
+                        <span class="error"></span>
+                    </div>
+                    <label  class="col-md-2 ">
+*                        مقصد تور
+                    </label>
+
+
+            </div>
+            <div class="col-md-12 , form-group">
+                <div class="col-md-6"></div>
+                <div class="col-md-4">
+                        <input type="text" class="form-control" id="source" placeholder="نام شهر مبدا">
+                        <span class="error"></span>
+                    </div>
+                    <label  class="col-md-2 ">
+*        محل حرکت
+                    </label>
+                </div>
+
+                <div class="col-md-12 , form-group">
+                <div class="col-md-6"></div>
+                <div class="col-md-4">
+                        <input type="date" class="form-control" id="start" >
+                        <span class="error"></span>
+                    </div>
+                    <label  class="col-md-2 ">
+*زمان حرکت
+                    </label>
+
+            </div>
+            <div class="col-md-12 , form-group">
+                <div class="col-md-6"></div>
+                <div class="col-md-4">
+                        <input type="date" class="form-control" id="end" >
+                        <span class="error"></span>
+                    </div>
+                    <label  class="col-md-2 ">
+*زمان بازگشت
+                    </label>
+
+            </div>
+            <div class="col-md-12 , form-group">
+                <div class="col-md-6"></div>
+                <div class="col-md-4">
+                        <input type="text" class="form-control" id="des" placeholder="تعدادی که میخواهید ما بفروشیم">
+                        <span class="error"></span>
+                    </div>
+                    <label  class="col-md-2 ">
+*تعداد نفرات
+                    </label>
+
+            </div>
+            <div class="col-md-12 , form-group">
+                <div class="col-md-6"></div>
+                <div class="col-md-4">
+                        <input type="text" class="form-control" id="des" placeholder="نام مدیر اصلی تور">
+                        <span class="error"></span>
+                    </div>
+                    <label  class="col-md-2 ">
+*نام مسئول
+                    </label>
+
+            </div>
+            <div class="col-md-12 , form-group">
+                <div class="col-md-6"></div>
+                <div class="col-md-4">
+                        <input type="text" class="form-control" id="des" placeholder="نام معاون مدیر تور">
+                        <span class="error"></span>
+                    </div>
+                    <label  class="col-md-2 ">
+معاون مسئول
+                    </label>
+
+            </div>
+            <div class="col-md-12 , form-group">
+                <div class="col-md-3"></div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="des" placeholder="نام شرکت هواپیمایی">
+                </div>
+                <label class="col-md-2">
+                    *نام شرکت
+                </label>
+
+                <div class="col-md-2">
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; هواپیما
+                          </label>
+                        </div>
+                    </div>
+                    <label  class="col-md-2 ">
+*وسیله حمل ونقل
+                    </label>
+
+
+            </div>
+            <div class="col-md-12 , form-group">
+                <div class="col-md-3"></div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="des" placeholder="نام قطار رجا">
+                </div>
+                <label class="col-md-2">
+*نام قطار
+                </label>
+
+                <div class="col-md-2">
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; قطار
+                          </label>
+                        </div>
+                    </div>
+                    <label  class="col-md-2 ">
+                    </label>
+
+
+            </div>
+            <div class="col-md-12 , form-group">
+                <div class="col-md-3"></div>
+                <div class="col-md-3">
+                    <select class="form-control">
+                      <option>
+VIP
+                      </option>
+                      <option>
+معمولی
+                      </option>
+                    </select>
+                </div>
+                <label class="col-md-2">
+                    *نوع اتوبوس
+                </label>
+
+                <div class="col-md-2">
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; اتوبوس
+                          </label>
+                        </div>
+                    </div>
+                    <label  class="col-md-2 ">
+                    </label>
+
+
+            </div>
+
+            <div class="col-md-12 , form-group">
+                <div class="col-md-2">
+                    <input type="text" class="form-control" id="des" placeholder="تعداد ستاره">
+                </div>
+                <Label class="col-md-1">
+                    *درجه
+                </Label>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="des" placeholder="نام هتل">
+                </div>
+                <label class="col-md-2">
+                    *نام هتل
+                </label>
+
+                <div class="col-md-2">
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; هتل
+                          </label>
+                        </div>
+                    </div>
+                    <label  class="col-md-2 ">
+*محل اقامت
+                    </label>
+
+
+            </div>
+             <div class="col-md-12 , form-group">
+                <div class="col-md-3"></div>
+
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="des" placeholder=" نام هتل آپارتمان">
+                </div>
+                <label class="col-md-2">
+*نام هتل آپارتمان
+                </label>
+
+                <div class="col-md-2">
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;هتل آپارتمان (سوئیت)
+                          </label>
+                        </div>
+                    </div>
+                    <label  class="col-md-2 ">
+                    </label>
+
+
+            </div>
+             <div class="col-md-12 , form-group">
+                <div class="col-md-3"></div>
+
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="des" placeholder="نام مسافرخانه">
+                </div>
+                <label class="col-md-2">
+                    *نام مسافرخانه
+                </label>
+
+                <div class="col-md-2">
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; مسافرخانه
+                          </label>
+                        </div>
+                    </div>
+                    <label  class="col-md-2 ">
+                    </label>
+
+
+            </div>
+
+            <table class="col-md-12">
+                <tr class="col-md-12">
+                    <td class="col-md-2">
+                        <label >
+*نام مکان
+                </label>
+                    </td>
+
+                    <td class="col-md-1">
+                    <input type="text" class="form-control,i" id="des">
+                    </td>
+
+                    <td class="col-md-2">
+                        <label>
+*زمان بازدید
+                </label>
+                    </td>
+                    <td class="col-md-2">
+
+                    <input type="date" class="form-control,i" id="des">
+
+                    </td>
+
+
+                    <td class="col-md-2" >
+                        <label >
+*هزینه بازدید
+                </label>
+                    </td>
+
+                    <td class="col-md-2">
+                     <input type="text" class="form-control ,i" id="des" >
+
+                    </td>
+
+                <td class="col-md-1"><input id="add" class="btn btn-success" type="button" value="اضافه" onclick="add1(this)" /></td>
+
+                </tr>
+            </table>
+
+            <div class="col-md-12 , form-group">
+                <div class="col-md-4"></div>
+                <div class="col-md-3">
+                        <input type="text" class="form-control" id="des" placeholder="هزینه به ریال">
+                        <span class="error"></span>
+                    </div>
+                    <label  class="col-md-5 ">
+*هزینه سفر و مکان (بدون احتساب بازدیدها)
+                    </label>
+
+            </div>
+
+            <div class="col-md-12 , form-group">
+                <div class="col-md-4"></div>
+                <div class="col-md-3">
+                        <input type="text" class="form-control" id="des" placeholder="میزان تخفیف از 100">
+                        <span class="error"></span>
+                    </div>
+                    <label  class="col-md-5 ">
+درصد تخفیف برای اعضای سامانه سپاس ایران
+                    </label>
+
+            </div>
+            <div class="col-md-12 , form-group">
+                <div class="col-md-3"></div>
+                <div class="col-md-9">
+                    این تخفیف اجباری نیست اما در صورت لحاظ شدن از تبلیغات گسترده تری برخوردار خواهید شد
+                </div>
+
+            </div>
+
+            <div class="col-md-12 , form-group">
+                <div class="col-md-3"></div>
+                <div class="col-md-3">
+                        <input type="text" class="form-control" id="des" placeholder="پیش فرض 3 روز است">
+                        <span class="error"></span>
+                    </div>
+                    <label  class="col-md-6 ">
+گردشگران تا چند روز قبل از آغاز تور امکان انصراف دارند؟
+                    </label>
+
+            </div>
+
+            <div class="col-md-12 , form-group">
+                <div class="col-md-4"></div>
+                <div class="col-md-3">
+                        <input type="text" class="form-control" id="des" placeholder="هزینه به ریال">
+                        <span class="error"></span>
+                    </div>
+                    <label  class="col-md-5 ">
+*هزینه سفر و مکان (بدون احتساب بازدیدها)
+                    </label>
+
+            </div>
+
+            <div class="col-md-12 , form-group">
+                <div class="col-md-5"></div>
+                <div class="col-md-2">
+                    <input type="button" class="btn btn-info" value="upload"/>
+                </div>
+                <div class="col-md-2">
+                        <input type="text" class="form-control" id="des" placeholder="browse file">
+                        <span class="error"></span>
+                    </div>
+                    <label  class="col-md-3 ">
+*تصاویری از مکان تور
+                    </label>
+
+            </div>
+
+            <div class="col-md-12 , form-group">
+                <div class="col-md-1"></div>
+                <div class="col-md-6">
+                        <textarea  style="min-height: 100px" class="form-control" id="tourexplain" ></textarea>
+                        <span class="error"></span>
+                    </div>
+                    <label  class="col-md-5 ">
+                        توضیحاتی در مورد مقصد تور و جاذبه هایش بنویسید
+                    </label>
+
+            </div>
+
+            <div class="col-md-12 , form-group">
+                <div class="col-md-1"></div>
+                <div class="col-md-6">
+                        <textarea  style="min-height: 100px" class="form-control" id="tourexplain" ></textarea>
+                        <span class="error"></span>
+                    </div>
+                    <label  class="col-md-5 ">
+اطلاعات لازم در مورد محل و زمان حرکت بنویسید
+                    </label>
+
+            </div>
+
+            <div class="col-md-12 , form-group">
+                <div class="col-md-1"></div>
+                <div class="col-md-6">
+                        <textarea  style="min-height: 100px" class="form-control" id="tourexplain" ></textarea>
+                        <span class="error"></span>
+                    </div>
+                    <label  class="col-md-5 ">
+تمامی توضیحات باقیمانده در مورد شرایط سفر و تور را در اینجا درج کنید
+                    </label>
+
+            </div>
+
+            <div class="col-md-10 ">
+                <div class="col-md-6"></div>
+    <input class="btn btn-success" type="submit" name="next" value="گام بعد">
+                <a class="btn btn-danger" href="\userPage\tourBuilder\ga" name ="cancel">
+    انصراف
+    </a>
+</div>
+
+        </form>
+
+    </div>
+
+    <script>
+    function add1(button){
+    var table = button.parentNode.parentNode.parentNode;
+    var length = table.getElementsByTagName("tr").length;
+    var newrow = table.insertRow(length-1);
+        newrow.setAttribute("class","col-md-12");
+    var cells = ["","","","","",""];
+
+        cells[0] = newrow.insertCell(0);
+        cells[0].innerHTML = "<label > *نام مکان </label>";
+        cells[0].setAttribute("class","col-md-2");
+
+        cells[1] = newrow.insertCell(1);
+        cells[1].innerHTML = "<input type="+"text"+" class="+"form-control,i"+" id="+"des"+">";
+        cells[1].setAttribute("class","col-md-1");
+
+        cells[2] = newrow.insertCell(2);
+        cells[2].innerHTML = "<label> *زمان بازدید </label>";
+        cells[2].setAttribute("class","col-md-2");
+
+        cells[3] = newrow.insertCell(3);
+        cells[3].innerHTML = "<input type="+"date"+" class="+"form-control,i"+">";
+        cells[3].setAttribute("class","col-md-2");
+
+        cells[4] = newrow.insertCell(4);
+        cells[4].innerHTML = "<label > *هزینه بازدید </label>";
+        cells[4].setAttribute("class","col-md-2");
+
+        cells[5] = newrow.insertCell(5);
+        cells[5].innerHTML = "<input type="+"text"+" class="+"form-control ,i"+">";
+        cells[5].setAttribute("class","col-md-2");
+
+        cells[6] = newrow.insertCell(6);
+        cells[6].innerHTML = "";
+        cells[6].setAttribute("class","col-md-1");
+}
+    </script>
+
+{% endblock %}
