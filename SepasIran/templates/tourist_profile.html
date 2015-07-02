@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block css %}
+	<link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+{% endblock %}
+{% block content %}
+
+<h1>
+اطلاعات کاربری
+    </h1>
+
+    <p>
+اطلاعات کاربری شما به شرح زیر است
+    </p>
+<form method="post" action="/userpage/gardeshgar">
+{% csrf_token %}
+
+    <div class="col-md-12 , form-group">
+                <div class="col-md-6"></div>
+                <div class="col-md-4">
+                        niloofarmahzoon@gmail.com
+                    </div>
+                    <label  class="col-md-2 ">
+ایمیل
+                    </label>
+
+            </div>
+    <div class="col-md-12 , form-group">
+                <div class="col-md-6"></div>
+                <div class="col-md-4">
+                        nmahzoon
+                    </div>
+                    <label  class="col-md-2 ">
+نام کاربری
+                    </label>
+
+            </div>
+
+    <div class="col-md-12 , form-group">
+                <div class="col-md-6"></div>
+                <div class="col-md-4">
+                        نیلوفر
+                    </div>
+                    <label  class="col-md-2 ">
+نام
+                    </label>
+
+
+            </div>
+
+    <div class="col-md-12 , form-group">
+                <div class="col-md-6"></div>
+                <div class="col-md-4">
+                        محزون
+                    </div>
+                    <label  class="col-md-2 ">
+نام خانوادگی
+                    </label>
+
+
+            </div>
+
+
+    <div class="col-md-12 , form-group">
+                <div class="col-md-6"></div>
+                <div class="col-md-4">
+                        زن
+                    </div>
+                    <label  class="col-md-2 ">
+جنسیت
+                    </label>
+
+
+            </div>
+
+    <div class="col-md-12 , form-group">
+                <div class="col-md-6"></div>
+                <div class="col-md-4">
+                        21
+                    </div>
+                    <label  class="col-md-2 ">
+سن
+                    </label>
+
+            </div>
+
+    <div class="col-md-12 , form-group">
+                <div class="col-md-6"></div>
+                <div class="col-md-4">
+                        تهران
+                    </div>
+                    <label  class="col-md-2 ">
+شهر
+                    </label>
+
+
+            </div>
+
+
+<div class="col-md-10 ">
+                <div class="col-md-6"></div>
+    <a class="btn btn-success" href="\editprofile\tourist\gardeshgar" name ="send">
+تغییر اطلاعات
+    </a>
+    <a class="btn btn-danger" href="\userpage\gardeshgar" name ="cancel">
+    بازگشت
+    </a>
+
+</div>
+
+</form>
+
+{% endblock %}

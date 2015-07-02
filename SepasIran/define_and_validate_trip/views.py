@@ -22,3 +22,23 @@ def tour_define(request,username):
     return render(request,"tour_define.html",{
         'username': username,
     })
+
+
+def airplane_define(request,username):
+
+    return render(request,"airplane_define.html",{
+        'username': username,
+    })
+
+
+def train_define(request,username):
+
+    return render(request,"airplane_define.html",{
+        'username': username,
+    })
+
+def cancel(request,username):
+
+    return render(request,"cancel.html",{
+        'username': username,
+    })

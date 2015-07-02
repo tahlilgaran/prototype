@@ -1,0 +1,185 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block css %}
+	<link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+{% endblock %}
+{% block content %}
+
+    <h1>
+تعریف خدمت    </h1>
+
+    <p>
+    لطفا اطلاعات پروازی که میخواهید بفروشید با دقت در زیر وارد نمایید
+            پر کردن فیلدهای ستاره دار الزامی می باشد.<br>
+
+    </p>
+
+    <div class="col-md-11">
+        <form method="post" action="">
+            <div class="col-md-12 , form-group">
+                <div class="col-md-6"></div>
+                <div class="col-md-4">
+ماهان
+                    </div>
+                    <label  class="col-md-2 ">
+                نام شرکت
+                    </label>
+
+
+            </div>
+
+            <div class="col-md-12 , form-group">
+                <div class="col-md-6"></div>
+                <div class="col-md-4">
+                        <input type="text" class="form-control" id="des" placeholder="نام شهر مبدا">
+                        <span class="error"></span>
+                    </div>
+                    <label  class="col-md-2 ">
+*مبدا پرواز
+                    </label>
+
+            </div>
+
+            <div class="col-md-12 , form-group">
+                <div class="col-md-6"></div>
+                <div class="col-md-4">
+                        <input type="text" class="form-control" id="des" placeholder="نام شهر مقصد">
+                        <span class="error"></span>
+                    </div>
+                    <label  class="col-md-2 ">
+*مقصد پرواز
+                    </label>
+
+
+            </div>
+
+            <div class="col-md-12 , form-group">
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                        <input type="time" class="form-control" id="start" >
+                        <span class="error"></span>
+                    </div>
+                    <label  class="col-md-2 ">
+*ساعت حرکت
+                        </label>
+                <div class="col-md-4">
+                        <input type="date" class="form-control" id="start" >
+                        <span class="error"></span>
+                    </div>
+                    <label  class="col-md-2 ">
+*تاریخ حرکت
+                    </label>
+
+            </div>
+
+            <div class="col-md-12 , form-group">
+                <div class="col-md-6"></div>
+                <div class="col-md-4">
+                        <input type="text" class="form-control" id="des" placeholder="قیمت هر صندلی به ریال">
+                        <span class="error"></span>
+                    </div>
+                    <label  class="col-md-2 ">
+قیمت هر بلیت
+                    </label>
+
+            </div>
+            <div class="col-md-12 , form-group">
+                <div class="col-md-4"></div>
+                <div class="col-md-3">
+                        <input type="text" class="form-control" id="des" placeholder="میزان تخفیف از 100">
+                        <span class="error"></span>
+                    </div>
+                    <label  class="col-md-5 ">
+درصد تخفیف برای اعضای سامانه سپاس ایران
+                    </label>
+
+            </div>
+            <div class="col-md-12 , form-group">
+                <div class="col-md-3"></div>
+                <div class="col-md-9">
+                    این تخفیف اجباری نیست اما در صورت لحاظ شدن از تبلیغات گسترده تری برخوردار خواهید شد
+                </div>
+
+            </div>
+
+
+            <div class="col-md-12 , form-group">
+                <div class="col-md-3"></div>
+                <div class="col-md-9">
+*شماره صندلی هایی که می خواهید بفروشید
+                </div>
+
+            </div>
+
+            <table class="col-md-12">
+                <tr class="col-md-12">
+                    <td class="col-md-1">
+                        <label>
+                            از
+                        </label>
+                    </td>
+                    <td class="col-md-1">
+                        <input type="text" class="form-control ,i">
+                    </td>
+                    <td class="col-md-1">
+                        <label>
+                            تا
+                        </label>
+                    </td>
+                    <td class="col-md-1">
+                        <input type="text" class="form-control ,i">
+                    </td>
+                                        <td class="col-md-1"><input id="add" class="btn btn-success" type="button" value="اضافه" onclick="add1(this)" /></td>
+
+                                        <td class="col-md-7"></td>
+
+
+                </tr>
+            </table>
+
+<div class="col-md-10 ">
+                <div class="col-md-6"></div>
+<a class="btn btn-success" href="\userPage\gardeshsaz" name ="cancel">
+گام بعد
+    </a>
+    <a class="btn btn-danger" href="\userPage\gardeshsaz" name ="cancel">
+    انصراف
+    </a>
+</div>
+
+
+</form>
+    </div>
+
+    <script>
+    function add1(button){
+    var table = button.parentNode.parentNode.parentNode;
+    var length = table.getElementsByTagName("tr").length;
+    var newrow = table.insertRow(length-1);
+        newrow.setAttribute("class","col-md-12");
+    var cells = ["","","","","",""];
+
+        cells[0] = newrow.insertCell(0);
+        cells[0].innerHTML = "<label>از </label>";
+        cells[0].setAttribute("class","col-md-1");
+
+        cells[1] = newrow.insertCell(1);
+        cells[1].innerHTML = "<input type="+"text"+" class="+"form-control ,i"+">";
+        cells[1].setAttribute("class","col-md-1");
+
+        cells[2] = newrow.insertCell(2);
+        cells[2].innerHTML = "<label> تا </label>";
+        cells[2].setAttribute("class","col-md-1");
+
+        cells[3] = newrow.insertCell(3);
+        cells[3].innerHTML = "<input type="+"text"+" class="+"form-control ,i"+">";
+        cells[3].setAttribute("class","col-md-1");
+
+        cells[4] = newrow.insertCell(4);
+        cells[4].innerHTML = ".";
+        cells[4].setAttribute("class","col-md-8");
+
+}
+    </script>
+
+{% endblock %}

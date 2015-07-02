@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block css %}
+	<link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+{% endblock %}
+{% block content %}
+
+<h1>
+ورود به سایت
+
+</h1>
+
+    <p>
+
+    برای استفاده از امکانات ویژه سایت باید وارد شوید. <br>
+    با ثبت نام در سایت ما از امکانات فراوانی برخوردار شوید.<br>
+    نام کاربری گردش سازان شماره ثبت شرکت می باشد.
+    </p>
+<form method="post">
+{% csrf_token %}
+    <div class="col-md-12 , form-group">
+                <div class="col-md-6"></div>
+                <div class="col-md-4">
+                        <input type="text"  name="username" class="form-control" id="des" placeholder="نام کاربری یا ایمیل">
+                        <span class="error"></span>
+                    </div>
+                    <label  class="col-md-2 ">
+نام کاربری
+                    </label>
+
+
+            </div>
+    <div class="col-md-12 , form-group">
+                <div class="col-md-6"></div>
+                <div class="col-md-4">
+                        <input type="password" name="pwd" class="form-control" id="des" placeholder="رمز عبور">
+                        <span class="error"></span>
+                    </div>
+                    <label  class="col-md-2 ">
+رمز عبور
+                    </label>
+
+
+            </div>
+
+
+    <div class="col-md-10 ">
+                <div class="col-md-6"></div>
+    <input class="btn btn-success" type="submit" name="login" value="ورود">
+    <input class="btn btn-info" type="submit" name="signup" value="ثبت نام">
+    <input class="btn btn-default" type="submit" name="forget" value="فراموشی رمز عبور">
+</div>
+</form>
+
+
+
+
+{% endblock %}

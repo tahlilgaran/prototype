@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block css %}
+	<link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+{% endblock %}
+{% block content %}
+
+<h1>
+ثبت نام گردش سازان
+    </h1>
+
+    <p>
+    لطفا اطلاعات زیر را با دقت تکمیل نمایید.<br>
+    فیلدهای ستاره دار الزامی هستند.
+    </p>
+<form method="post" action="/userpage/gardeshgar">
+{% csrf_token %}
+
+    <div class="col-md-12 , form-group">
+                <div class="col-md-6"></div>
+                <div class="col-md-4">
+                        <input type="email" class="form-control" id="des" placeholder="یک ایمیل یکتا و معتبر وارد کنید">
+                        <span class="error"></span>
+                    </div>
+                    <label  class="col-md-2 ">
+*ایمیل شرکت
+                    </label>
+
+            </div>
+    <div class="col-md-12 , form-group">
+                <div class="col-md-6"></div>
+                <div class="col-md-4">
+                        <input type="text" class="form-control" id="des" placeholder="نام تجاری سازمان خود را وارد نمایید">
+                        <span class="error"></span>
+                    </div>
+                    <label  class="col-md-2 ">
+*نام شرکت (مرکز ارائه)
+                    </label>
+
+            </div>
+
+    <div class="col-md-12 , form-group">
+                <div class="col-md-6"></div>
+                <div class="col-md-4">
+                        <input type="text" class="form-control" id="des" placeholder="شماره رسمی ثبت شرکت خود را وارد نمایید">
+                        <span class="error"></span>
+                    </div>
+                    <label  class="col-md-2 ">
+*شماره ثبت                    </label>
+
+
+            </div>
+
+    <div class="col-md-12 , form-group">
+                <div class="col-md-6"></div>
+                <div class="col-md-4">
+                        <input type="password" class="form-control" id="des" placeholder="رمز عبوری حداقل 6 حرفی">
+                        <span class="error"></span>
+                    </div>
+                    <label  class="col-md-2 ">
+رمز عبور              *      </label>
+
+            </div>
+
+    <div class="col-md-12 , form-group">
+                <div class="col-md-6"></div>
+                <div class="col-md-4">
+                        <input type="text" class="form-control" id="des" placeholder="رمز عبور خود را دوباره وارد نمایید">
+                        <span class="error"></span>
+                    </div>
+                    <label  class="col-md-2 ">
+*تکرار رمز عبور
+                    </label>
+
+
+            </div>
+
+    <div class="col-md-12 , form-group">
+                <div class="col-md-6"></div>
+                <div class="col-md-4">
+                        <input type="text" class="form-control" id="des" placeholder="شهر محل سازمان را وارد کنید">
+                        <span class="error"></span>
+                    </div>
+                    <label  class="col-md-2 ">
+*شهر
+                    </label>
+
+
+            </div>
+
+
+    <div class="col-md-12 , form-group">
+                <div class="col-md-6"></div>
+
+
+                <div class="col-md-4">
+
+                        <div class="radio">
+  <label><input type="radio" value=1 name="optradio"><p style="display: inline-block">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; تور
+      </p>
+  </label>
+</div>
+<div class="radio">
+  <label><input type="radio" name="optradio">
+  <p style="display: inline-block">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; هتل
+      </p>
+  </label>
+</div>
+<div class="radio">
+  <label><input type="radio" name="optradio">
+  <p style="display: inline-block">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; رستوران
+      </p>
+  </label>
+    </div>
+    <div class="radio">
+  <label><input type="radio" name="optradio">
+    <p style="display: inline-block">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; هواپیما
+      </p>
+  </label>
+        </div>
+   <div class="radio">
+  <label><input type="radio" name="optradio">
+    <p style="display: inline-block">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; قطار
+      </p>
+  </label>
+</div>
+                </div>
+        <label  class="col-md-2 ">
+*نوع گردش ارائه شده در سازمان
+                    </label>
+        </div>
+
+
+<div class="col-md-10 ">
+                <div class="col-md-6"></div>
+    <a class="btn btn-success" href="\userpage\gardeshsaz" name ="send">
+ثبت نام
+    </a>
+    <a class="btn btn-danger" href="\signIn\" name ="cancel">
+    انصراف
+    </a>
+
+</div>
+
+</form>
+
+{% endblock %}

@@ -5,7 +5,11 @@
 {% endblock %}
 {% block content %}
         <div class="col-md-6 ">
-            <a href="$" type="button" class="btn btn-success , col-md-12 ">مشخصات کاربری</a></br>
+        {% if username == 'gardeshgar' %}
+            <a href="/profile/tourist/gardeshgar" type="button" class="btn btn-success , col-md-12 ">مشخصات کاربری</a></br>
+            {% else %}
+            <a href="/profile/tourbuilder/gardeshsaz" type="button" class="btn btn-success , col-md-12 ">مشخصات کاربری</a></br>
+            {% endif %}
             <div class="box">
                 <span id="" style="font-size: 20px; color: red">
                     هشدار ها

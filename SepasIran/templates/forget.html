@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block css %}
+	<link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+{% endblock %}
+{% block content %}
+<h1>
+فراموشی رمز عبور
+</h1>
+
+    <p>
+    ایمیل خود را در کادر وارد کنید تا رمز عبور جدید به شما ارسال گردد.
+    </p>
+<form method="post">
+{% csrf_token %}
+    <div class="col-md-12 , form-group">
+                <div class="col-md-6"></div>
+                <div class="col-md-4">
+                        <input type="email"  name="username" class="form-control" id="des" placeholder="ایمیل وارد شده هنگام ثبت نام">
+                        <span class="error"></span>
+                    </div>
+                    <label  class="col-md-2 ">
+ایمیل
+                    </label>
+
+            </div>
+<div class="col-md-10 ">
+                <div class="col-md-6"></div>
+    <a class="btn btn-success" href="\signIn\" name ="send">
+    ارسال رمز عبور
+    </a>
+    <a class="btn btn-danger" href="\signIn\" name ="cancel">
+    انصراف
+    </a>
+
+</div>
+</form>
+
+{% endblock %}

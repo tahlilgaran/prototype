@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block css %}
+	<link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+{% endblock %}
+{% block content %}
+
+    <h1>
+    انصراف از فروش
+    </h1>
+
+    <p>
+فروش تور باداب سورت در سامانه سپاس ایران متوقف گردید  <br>
+    خرید های انجام گرفته توسط مشتریان سامانه به قوت خود باقیست و لی خرید دیگری از این طریق انجام نخواهد گرفت
+    </p>
+<div class="col-md-10 ">
+                <div class="col-md-6"></div>
+    <a class="btn btn-success" href="\userPage\gardeshsaz" name ="cancel">
+تایید و ادامه
+    </a>
+    <a class="btn btn-danger" href="\userPage\gardeshsaz" name ="cancel">
+نه به فروش ادامه میدهم
+    </a>
+
+
+{% endblock %}

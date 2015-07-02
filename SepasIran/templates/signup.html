@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block css %}
+	<link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+{% endblock %}
+{% block content %}
+
+<h1>
+ثبت نام
+</h1>
+    <p>
+    چنانچه گردشگر هستید مورد اول و چنانچه یکی از ارائه دهندگان رسمی خدمات گردشگری هستید مورد دوم را انتخاب نمایید.
+    </p>
+
+    <div class="col-md-11">
+    <div class="col-md-4"></div>
+    <form method="post">
+        {% csrf_token %}
+    <div class="col-md-8">
+
+<div class="radio">
+  <label><input type="radio" name="optradio">
+  <p style="display: inline-block">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ثبت نام گردشگر
+      </p>
+  </label>
+</div>
+<div class="radio">
+  <label><input type="radio" name="optradio">
+  <p style="display: inline-block">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ثبت نام گردش سازان
+      </p>
+  </label>
+    </div>
+
+
+</div>
+<div class="col-md-10 , pull-right">
+    <input class="btn btn-success" type="submit"  name="next" value="گام بعد">
+    <a class="btn btn-danger" href="\signIn\" name ="cancel">
+    انصراف
+    </a>
+</div>
+        </form>
+</div>
+
+{% endblock %}
