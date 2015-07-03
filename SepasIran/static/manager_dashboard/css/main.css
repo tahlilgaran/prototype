@@ -112,3 +112,12 @@ a:active {
     margin: 10px;
 }
 
+.payment_table {
+    border: 1px solid black;
+}
+
+.payment_table td{
+    border: 1px solid black;
+    padding: 10px;
+}
+

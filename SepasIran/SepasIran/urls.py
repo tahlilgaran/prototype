@@ -50,6 +50,7 @@ urlpatterns = [
     url(r'manager/tourRating/$', 'manager_dashboard.views.onlineComments'),
     url(r'manager/userLists/$', 'manager_dashboard.views.userLists'),
     url(r'manager/paymentsList/$', 'manager_dashboard.views.paymentLists'),
+    url(r'manager/contractPercent/$', 'manager_dashboard.views.contractPercent'),
     url(r'manager/OnlineComments/$', 'manager_dashboard.views.onlineComments'),
     url(r'polling/(P?<tour_id>\+d)/$', 'quality_control.views.polling'),
     url(r'onlinePolling/$', 'quality_control.views.onlinePolling'),

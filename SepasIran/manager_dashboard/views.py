@@ -20,3 +20,11 @@ def onlineComments(request):
 
 def userLists(request):
     return render(request, "manager_gardeshgar_info.html", {"username": "admin"})
+
+
+
+def paymentLists(request):
+    return render(request, "manager_paymentList.html", {"username": "admin"})
+
+def contractPercent(request):
+    return render(request, "contract_percent.html", {"username": "admin"})
