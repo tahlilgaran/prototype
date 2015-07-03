@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block css %}
+	<link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+{% endblock %}
+{% block content %}
+
+<h2>
+ارسال بازخورد برخط
+</h2>
+
+    <p>
+    لطفا نظر خود را در خصوص تور با ما در میان بگذارید .</p>
+<form method="post" action="/userpage/gardeshgar">
+{% csrf_token %}
+<textarea cols="60" rows="5"></textarea>
+    <br>
+
+ <button type="submit" class="btn btn-success">ارسال</button>
+</form>
+
+{% endblock %}

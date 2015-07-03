@@ -14,8 +14,8 @@ def tourRating(request):
     return render(request, "manager_tours_rating.html", {"username": "admin"})
 
 
-def onlineComments(request):
-    return render(request, "online_comments.html", {"username": "admin"})
+def showOnlineComments(request):
+    return render(request, "manager_online_comments.html", {"username": "admin"})
 
 
 def userLists(request):
@@ -27,4 +27,4 @@ def paymentLists(request):
     return render(request, "manager_paymentList.html", {"username": "admin"})
 
 def contractPercent(request):
-    return render(request, "contract_percent.html", {"username": "admin"})
+    return render(request, "manager_contract_percent.html", {"username": "admin"})

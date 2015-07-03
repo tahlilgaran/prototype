@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+{% endblock %}
+{% block content %}
+
+
+    <h2>
+        نظرسنجی تور
+    </h2>
+
+    <p>
+        لطفاً برای مدیریت بهتر تورها و ارائه ی خدمات بهتر سوالات زیر را در خصوص توری که در آن شرکت کردید پاسخ دهید .
+        <br>
+        از صداقت شما متشکریم
+    </p>
+    <form method="post" action="/userpage/gardeshgar">
+        {% csrf_token %}
+        1- تور را از لحاظ نظم چگونه ارزیابی میکنید ؟
+        <br>
+        <input type="radio" style="margin-right: 30px " name="1" checked>       عالی
+        <input type="radio" style="margin-right: 30px "name="1" >       خوب
+        <input type="radio" style="margin-right: 30px "name="1" >      متوسط
+        <input type="radio" style="margin-right: 30px " name="1" >     بد
+        <input type="radio" style="margin-right: 30px " name="1">    خیلی بد
+        <br>
+<hr>
+        2- کیفیت خدمات تور را چگونه ارزیابی می کنید ؟<br>
+        <input type="radio" style="margin-right: 30px " name="2" checked>       عالی
+        <input type="radio" style="margin-right: 30px "name="2">       خوب
+        <input type="radio" style="margin-right: 30px "name="2" v>      متوسط
+        <input type="radio" style="margin-right: 30px " name="2">     بد
+        <input type="radio" style="margin-right: 30px " name="2">    خیلی بد
+        <br>
+<hr>
+        3- رفتار مسئولان و مجریان تور را چگونه ارزیابی می کنید ؟
+        <br>
+        <input type="radio" style="margin-right: 30px " name="3"checked>       عالی
+        <input type="radio" style="margin-right: 30px "name="3" >       خوب
+        <input type="radio" style="margin-right: 30px "name="3" >      متوسط
+        <input type="radio" style="margin-right: 30px " name="3" >     بد
+        <input type="radio" style="margin-right: 30px " name="3" >    خیلی بد
+        <br>
+<hr>
+
+        <button type="submit" class="btn btn-success">ارسال</button>
+    </form>
+{% endblock %}
