@@ -4,12 +4,38 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'present_trip/css/main.css' %}">
 {% endblock %}
 {% block content %}
-        <div class="col-md-6 ">
+{% if username == '' %}
+    <p>
+    این صفحه مربوط به کاربران سامانه است.
+    </p>
+    <p>
+    در صورتی که کاربر سامانه هستید وارد شوید.
+    </p>
+{% else %}
+        <div class="col-md-12 , box">
+            <span>
+                مانده حساب شما برابر ۴۰۰۰۰ تومان می باشد.
+            </span>
         {% if username == 'gardeshgar' %}
+            <div class="col-md-5">
             <a href="/profile/tourist/gardeshgar" type="button" class="btn btn-success , col-md-12 ">مشخصات کاربری</a></br>
+            <a href="/quality/userRating" type="button" class="btn btn-info , col-md-12 ">
+            نظر سنجی
+            </a>
+            <a href="/quality/onlineComment" type="button" class="btn btn-warning , col-md-12 ">
+            نظردهی برخط
+            </a>
+            </br>
+        </div>
             {% else %}
+        <div class="col-md-5">
             <a href="/profile/tourbuilder/gardeshsaz" type="button" class="btn btn-success , col-md-12 ">مشخصات کاربری</a></br>
-            {% endif %}
+        </div>
+        {% endif %}
+
+        </div>
+        <div class="col-md-6 ">
+
             <div class="box">
                 <span id="" style="font-size: 20px; color: red">
                     هشدار ها
@@ -17,13 +43,16 @@
                 <ul class="nav nav-pills nav-stacked">
                     <li>
                         <div class="btn-group btn-group-xs" aria-label="Extra-small button group">
-                            <a href="$" type="button" class="btn btn-danger ,glyphicon glyphicon-record " style="color: #fff"></a></div>
-
+                            <a href="/show/tour/{{ username }}" type="button" class="btn btn-danger ,glyphicon glyphicon-record " style="color: #fff"></a></div>
+{% if username == 'gardeshgar' %}
                     درصورت عدم خرید تور باداب سورت تا فردا از لیست رزور حذف خواهید شد.
-                    </li>
+    {% else %}
+    زمان پایان مهلت تثبیت وضعیت رزور فردا می باشد.
+    {% endif %}
+    </li>
                     <li>
                         <div class="btn-group btn-group-xs" aria-label="Extra-small button group">
-                            <a href="$" type="button" class="btn btn-warning ,glyphicon glyphicon-record" style="color: #fff"></a></div>
+                            <a href="/show/tour/{{ username }}" type="button" class="btn btn-warning ,glyphicon glyphicon-record" style="color: #fff"></a></div>
                         زمان برگزاری تور باداب سورت ۱۷-۱۸ تیرماه میباشد.
                     </li>
                 </ul>
@@ -123,6 +152,6 @@
             </div>
         </div>
     {% endif %}
-
+{% endif %}
 
 {% endblock %}

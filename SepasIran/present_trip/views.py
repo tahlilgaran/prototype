@@ -10,8 +10,8 @@ def show_one_trip(request, kind = '' ,username = ''):
     elif kind == 'pack':
         return render(request , "present_trip/one_trip.html", {'kind':kind , 'username':username})
 
-def show_one_trip_status(request , kind =''):
-    return render(request , "present_trip/status_trip.html")
+def show_one_trip_status(request , kind = '' , username = ''):
+    return render(request , "present_trip/status_trip.html" , {'username':username , 'kind':kind})
 
 def search(request , username = '' , ispack = ''):
 

@@ -245,7 +245,9 @@
                 </table>
             </div>
         </div>
+    {% if username == 'admin' %}
 
+    {% else %}
     <div class="col-md-6"  style="float: left; direction: ltr">
         <a type="button" href="#" class="btn btn-success">
             فروش در مرکز عرضه
@@ -257,6 +259,7 @@
             لغو ادامه فروش در سامانه
         </a>
     </div>
+    {% endif %}
 {% endblock %}
 
 

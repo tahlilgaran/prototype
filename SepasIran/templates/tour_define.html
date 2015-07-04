@@ -8,7 +8,14 @@
     <h1>
     تعریف تور
     </h1>
-
+{% if username != 'gardeshsaz' %}
+    <p>
+        این صفحه مخصوص گردشسازان می باشد.
+    </p>
+    <p>
+        در صورتی که گردشساز هستید وارد سامانه شوید.
+    </p>
+{% else %}
     <p>
     لطفا اطلاعات زیر را در مورد تور خود با دقت تکمیل فرمایید.<br>
         پر کردن فیلدهای ستاره دار الزامی می باشد.<br>
@@ -426,10 +433,10 @@ VIP
             </div>
 <div class="col-md-10 ">
                 <div class="col-md-6"></div>
-            <a class="btn btn-success" href="\userPage\gardeshsaz" name ="cancel">
+            <a class="btn btn-success" href="/userpage/gardeshsaz" name ="cancel">
 گام بعد
     </a>
-    <a class="btn btn-danger" href="\userPage\gardeshsaz" name ="cancel">
+    <a class="btn btn-danger" href="/userpage/gardeshsaz" name ="cancel">
     انصراف
     </a>
 </div>
@@ -437,6 +444,7 @@ VIP
         </form>
 
     </div>
+{% endif %}
 
     <script>
     function add1(button){

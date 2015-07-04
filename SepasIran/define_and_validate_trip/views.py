@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 # Create your views here.
-def tarif_kind(request,username):
+def tarif_kind(request,username =''):
 
     if request.POST.get("next","") != "":
         print("next")
@@ -17,7 +17,7 @@ def tarif_kind(request,username):
     })
 
 
-def tour_define(request,username):
+def tour_define(request,username = ''):
 
     return render(request,"tour_define.html",{
         'username': username,
@@ -33,7 +33,7 @@ def airplane_define(request,username):
 
 def train_define(request,username):
 
-    return render(request,"airplane_define.html",{
+    return render(request,"train_define.html",{
         'username': username,
     })
 

@@ -7,7 +7,10 @@ def signin(request):
 
     if request.POST.get("login","")!= "":
         username = request.POST.get("username")
+        if(username == 'admin'):
+            return HttpResponseRedirect('/manager/Dashboard/')
         return HttpResponseRedirect('/userpage/'+username)
+
     if request.method == 'GET' :
         username = ""
     if request.POST.get("signup","") != "":
@@ -53,7 +56,7 @@ def edit_tourist(request,username):
     })
 
 def edit_tourbuilder(request,username):
-
+    print('edit')
     return render(request, "edit_tourbuilder.html",{
         'username':username,
     })
@@ -65,7 +68,7 @@ def tourist_profile(request,username):
         'username':username,
     })
 def tourbuilder_profile(request,username):
-
+    print('profile.')
     return render(request, "tourbuilder_profile.html",{
         'username':username,
     })
