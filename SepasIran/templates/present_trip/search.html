@@ -1,23 +1,228 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block css %}
-	<link rel="stylesheet" type="text/css" href="{% static 'present_trip/css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'present_trip/css/main.css' %}"
+          xmlns="http://www.w3.org/1999/html">
 {% endblock %}
 {% block content %}
     <div class="col-md-12 , box">
         <form action="result/{{ username }}" class="form-group">{% csrf_token %}
-            <input class="col-md-6 , form-control" placeholder="شهر مقصد"/>
-            <input class="col-md-6 , form-control" placeholder="شهری که در آن هستید."/>
+            <table class="table">
+                <tr><td>
+                   <div class="col-md-6">
+                        <label>
+                            شهری که قصد گردش در آن دارید.
+                       </label>
+                       <select class=" form-control">
+                            <option>
+                                تهران
+                            </option>
+                            <option>
+                                سمنان
+                            </option>
+                            <option>
+                                مشهد
+                            </option>
+                            <option>
+                                اصفهان
+                            </option>
+                            <option>
+                                شیراز
+                            </option>
+                            <option>
+            همدان
+                            </option>
+                            <option>
+            کیش
+                            </option>
+                        </select></div>
 
-            <input type="date" class="col-md-12 , form-control" placeholder="امروز"/>
+                    <div class="col-md-6">
+                        <label>
+                                                شهری که در آن هستید.
+                        </label>
+                        <select class="form-control , col-md-6">
+                            <option>
+                                تهران
+                            </option>
+                            <option>
+                                سمنان
+                            </option>
+                            <option>
+                                مشهد
+                            </option>
+                            <option>
+                                اصفهان
+                            </option>
+                            <option>
+                                شیراز
+                            </option>
+                            <option>
+            همدان
+                            </option>
+                            <option>
+            کیش
+                            </option>
+                    </select></div>
+                </td></tr>
 
-        </form>
+                <tr><td>
+                        <label class="col-md-12">
+                            تاریخ
+                        </label>
+                        <div class="col-md-2"></div>
+                        <div class="col-md-4">
+                            <div class="col-md-10"><input type="date" class="col-md-8 , form-control"/></div>
+                            <label class="col-md-2">
+تا:
+                            </label>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="col-md-10"><input type="date"  class="form-control"/></div>
+                            <label class="col-md-2">
+از:
+                            </label>
+                        </div>
+                        <div class="col-md-2"></div>
+                </td></tr>
 
-    <a type="button" href="/search/result/{{ username }}" class="btn btn-success">
+                <tr><td>
+                    <label class="col-md-12">
+نوع
+                    </label>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-7">
+                    <div class="checkbox-inline ">
+                        <label>
+                            <input type="checkbox" value="" onclick="tour_func(this)">
+                            <div style="padding-right: 20px;">
+تور
+                            </div>
+                        </label>
+                    </div>
+                        <div class="checkbox-inline">
+                            <label>
+                                <input type="checkbox" value="" onclick="hotel_func(this)">
+                                <div style="padding-right: 20px;">
+    هتل
+                                </div>
+                            </label>
+                        </div>
+                        <div class="checkbox-inline">
+                            <label>
+                                <input type="checkbox" value="" onclick="restooran_func(this)">
+                                <div style="padding-right: 20px;">
+    رستوران
+                                </div>
+                            </label>
+                        </div>
+                        <div class="checkbox-inline">
+                            <label>
+                                <input type="checkbox" value="" onclick="airplane_func(this)">
+                                <div style="padding-right: 20px;">
+    هواپیما
+                                </div>
+                            </label>
+                        </div>
+                        <div class="checkbox-inline">
+                            <label>
+                                <input type="checkbox" value=""  onclick="train_func(this)">
+                                <div style="padding-right: 20px;">
+    قطار
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-3"></div>
+                </td></tr>
+
+                <tr class="hidden" id="tour_info"><td>
+                    <label class="col-md-12">
+مشخصات تور
+                    </label>
+                </td></tr>
+
+                <tr class="hidden" id="hotel_info"><td>
+                    <label class="col-md-12">
+مشخصات هتل
+                    </label>
+                </td></tr>
+
+                <tr class="hidden" id="restooran_info"><td>
+                    <label class="col-md-12">
+مشخصات رستوران
+                    </label>
+                </td></tr>
+
+                <tr class="hidden" id="airplane_info"><td>
+                    <label class="col-md-12">
+مشخصات هواپیما
+                    </label>
+                </td></tr>
+
+                <tr class="hidden" id="train_info"><td>
+                    <label class="col-md-12">
+مشخصات قطار
+                    </label>
+                </td></tr>
+            </table>
+        <div class="col-md-4"></div>
+        <a type="button" href="/search/result/{{ username }}" class="btn btn-success , col-md-4">
         جستجو
         </a>
-
+        <div class="col-md-4"></div>
+        </form>
     </div>
 {% endblock %}
 {% block script %}
+    <script>
+        var tour_info = document.querySelector('#tour_info');
+        var restooran_info = document.querySelector('#restooran_info');
+        var hotel_info = document.querySelector('#hotel_info');
+        var airplane_info = document.querySelector('#airplane_info');
+        var train_info = document.querySelector('#train_info');
+
+        function tour_func(a){
+            if (a.checked){
+                tour_info.className = '';
+            }else{
+                tour_info.className = 'hidden';
+            }
+        }
+
+        function restooran_func(a){
+            if (a.checked){
+                restooran_info.className = '';
+            }else{
+                restooran_info.className = 'hidden';
+            }
+        }
+
+        function hotel_func(a){
+            if (a.checked){
+                hotel_info.className = '';
+            }else{
+                hotel_info.className = 'hidden';
+            }
+        }
+
+        function airplane_func(a){
+            if (a.checked){
+                airplane_info.className = '';
+            }else{
+                airplane_info.className = 'hidden';
+            }
+        }
+
+        function train_func(a){
+            if (a.checked){
+                train_info.className = '';
+            }else{
+                train_info.className = 'hidden';
+            }
+        }
+
+
+
+    </script>
 {% endblock %}
