@@ -95,7 +95,7 @@
                     <div class="checkbox-inline ">
                         <label>
                             <input type="checkbox" value="" onclick="tour_func(this)">
-                            <div style="padding-right: 20px;">
+                            <div class="checkbox_text">
 تور
                             </div>
                         </label>
@@ -103,7 +103,7 @@
                         <div class="checkbox-inline">
                             <label>
                                 <input type="checkbox" value="" onclick="hotel_func(this)">
-                                <div style="padding-right: 20px;">
+                                <div class="checkbox_text">
     هتل
                                 </div>
                             </label>
@@ -111,7 +111,7 @@
                         <div class="checkbox-inline">
                             <label>
                                 <input type="checkbox" value="" onclick="restooran_func(this)">
-                                <div style="padding-right: 20px;">
+                                <div class="checkbox_text">
     رستوران
                                 </div>
                             </label>
@@ -119,7 +119,7 @@
                         <div class="checkbox-inline">
                             <label>
                                 <input type="checkbox" value="" onclick="airplane_func(this)">
-                                <div style="padding-right: 20px;">
+                                <div class="checkbox_text">
     هواپیما
                                 </div>
                             </label>
@@ -127,7 +127,7 @@
                         <div class="checkbox-inline">
                             <label>
                                 <input type="checkbox" value=""  onclick="train_func(this)">
-                                <div style="padding-right: 20px;">
+                                <div class="checkbox_text">
     قطار
                                 </div>
                             </label>
@@ -137,33 +137,274 @@
                 </td></tr>
 
                 <tr class="hidden" id="tour_info"><td>
-                    <label class="col-md-12">
+                    <h4 class="col-md-12">
 مشخصات تور
-                    </label>
+                    </h4>
+                    <div>
+                    <div class="choices, col-md-9">
+                        <div class="checkbox-inline">
+                            <input type="checkbox" value="">
+                            <div class="checkbox_text">
+    مارکوپولو
+                            </div>
+                        </div>
+                        <div class="checkbox-inline">
+                            <input type="checkbox" value="">
+                            <div class="checkbox_text">
+    دالاهو
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkbox-inline , col-md-3">
+                        <input type="checkbox" value="" onclick="selectAll(this)">
+                        <div class="checkbox_text">
+                            شرکت گردشگری:
+                        </div>
+                    </div>
+                    </div>
+
+                    <div>
+                    <div class="choices, col-md-9">
+                        <div class="checkbox-inline">
+                            <input type="checkbox" value="">
+                            <div class="checkbox_text">
+    طبیعت گردی
+                            </div>
+                        </div>
+                        <div class="checkbox-inline">
+                            <input type="checkbox" value="">
+                            <div class="checkbox_text">
+ایران گردی
+                            </div>
+                        </div>
+                        <div class="checkbox-inline">
+                            <input type="checkbox" value="">
+                            <div class="checkbox_text">
+جهان گردی
+                            </div>
+                        </div>
+                        <div class="checkbox-inline">
+                            <input type="checkbox" value="">
+                            <div class="checkbox_text">
+زیارتی
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-inline , col-md-3">
+                        <input type="checkbox" value="" name="tour_kind" onclick="selectAll(this)">
+                        <div class="checkbox_text">
+نوع:
+                        </div>
+                    </div>
+                    </div>
                 </td></tr>
 
                 <tr class="hidden" id="hotel_info"><td>
-                    <label class="col-md-12">
+                    <h4 class="col-md-12">
 مشخصات هتل
-                    </label>
+                    </h4>
+                    <div>
+                    <div class="choices, col-md-9">
+                        <div class="checkbox-inline">
+                            <input type="checkbox" value="">
+                            <div class="checkbox_text">
+۵ ستاره
+                            </div>
+                        </div>
+                        <div class="checkbox-inline">
+                            <input type="checkbox" value="">
+                            <div class="checkbox_text">
+۴ ستاره
+                            </div>
+                        </div>
+                        <div class="checkbox-inline">
+                            <input type="checkbox" value="">
+                            <div class="checkbox_text">
+۳ ستاره
+                            </div>
+                        </div>
+                        <div class="checkbox-inline">
+                            <input type="checkbox" value="">
+                            <div class="checkbox_text">
+۲ ستاره
+                            </div>
+                        </div>
+                        <div class="checkbox-inline">
+                            <input type="checkbox" value="">
+                            <div class="checkbox_text">
+۱ ستاره
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkbox-inline , col-md-3">
+                        <input type="checkbox" value="" onclick="selectAll(this)">
+                        <div class="checkbox_text">
+درجه:
+                        </div>
+                    </div>
+                    </div>
                 </td></tr>
 
                 <tr class="hidden" id="restooran_info"><td>
-                    <label class="col-md-12">
+                    <h4 class="col-md-12">
 مشخصات رستوران
-                    </label>
+                    </h4>
+                    <div>
+                    <div class="choices, col-md-9">
+                        <div class="checkbox-inline">
+                            <input type="checkbox" value="">
+                            <div class="checkbox_text">
+    صبحانه
+                            </div>
+                        </div>
+                        <div class="checkbox-inline">
+                            <input type="checkbox" value="">
+                            <div class="checkbox_text">
+    ناهار
+                            </div>
+                        </div>
+                        <div class="checkbox-inline">
+                            <input type="checkbox" value="">
+                            <div class="checkbox_text">
+عصرانه
+                            </div>
+                        </div>
+                        <div class="checkbox-inline">
+                            <input type="checkbox" value="">
+                            <div class="checkbox_text">
+شام
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkbox-inline , col-md-3">
+                        <input type="checkbox" value="" onclick="selectAll(this)">
+                        <div class="checkbox_text">
+وعده:
+                        </div>
+                    </div>
+                    </div>
+
+                    <div>
+                    <div class="choices, col-md-9">
+                        <div class="checkbox-inline">
+                            <input type="checkbox" value="">
+                            <div class="checkbox_text">
+فست فود
+                            </div>
+                        </div>
+                        <div class="checkbox-inline">
+                            <input type="checkbox" value="">
+                            <div class="checkbox_text">
+    ایرانی
+                            </div>
+                        </div>
+                        <div class="checkbox-inline">
+                            <input type="checkbox" value="">
+                            <div class="checkbox_text">
+ایتالیایی
+                            </div>
+                        </div>
+                        <div class="checkbox-inline">
+                            <input type="checkbox" value="">
+                            <div class="checkbox_text">
+فرانسوی
+                            </div>
+                        </div>
+                        <div class="checkbox-inline">
+                            <input type="checkbox" value="">
+                            <div class="checkbox_text">
+چینی
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkbox-inline , col-md-3">
+                        <input type="checkbox" value="" onclick="selectAll(this)">
+                        <div class="checkbox_text">
+نوع:
+                        </div>
+                    </div>
+                    </div>
                 </td></tr>
 
                 <tr class="hidden" id="airplane_info"><td>
-                    <label class="col-md-12">
+                    <h4 class="col-md-12">
 مشخصات هواپیما
-                    </label>
+                    </h4>
+                    <div>
+                    <div class="choices, col-md-9">
+                        <div class="checkbox-inline">
+                            <input type="checkbox" value="">
+                            <div class="checkbox_text">
+هما
+                            </div>
+                        </div>
+                        <div class="checkbox-inline">
+                            <input type="checkbox" value="">
+                            <div class="checkbox_text">
+ایران ایر
+                            </div>
+                        </div>
+                        <div class="checkbox-inline">
+                            <input type="checkbox" value="">
+                            <div class="checkbox_text">
+کیش ایر
+                            </div>
+                        </div>
+                        <div class="checkbox-inline">
+                            <input type="checkbox" value="">
+                            <div class="checkbox_text">
+آسمان
+                            </div>
+                        </div>
+                        <div class="checkbox-inline">
+                            <input type="checkbox" value="">
+                            <div class="checkbox_text">
+ماهان
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkbox-inline , col-md-3">
+                        <input type="checkbox" value="" onclick="selectAll(this)">
+                        <div class="checkbox_text">
+شرکت هواپیمایی:
+                        </div>
+                    </div>
+                    </div>
                 </td></tr>
 
                 <tr class="hidden" id="train_info"><td>
-                    <label class="col-md-12">
+                    <h4 class="col-md-12">
 مشخصات قطار
-                    </label>
+                    </h4>
+                    <div>
+                    <div class="choices, col-md-9">
+                        <div class="checkbox-inline">
+                            <input type="checkbox" value="">
+                            <div class="checkbox_text">
+؟؟
+                            </div>
+                        </div>
+                        <div class="checkbox-inline">
+                            <input type="checkbox" value="">
+                            <div class="checkbox_text">
+؟؟
+                            </div>
+                        </div>
+                        <div class="checkbox-inline">
+                            <input type="checkbox" value="">
+                            <div class="checkbox_text">
+سیمرغ
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkbox-inline , col-md-3">
+                        <input type="checkbox" value="" onclick="selectAll(this)">
+                        <div class="checkbox_text">
+درجه:
+                        </div>
+                    </div>
+                    </div>
                 </td></tr>
             </table>
         <div class="col-md-4"></div>
@@ -174,6 +415,8 @@
         </form>
     </div>
 {% endblock %}
+
+
 {% block script %}
     <script>
         var tour_info = document.querySelector('#tour_info');
@@ -185,6 +428,7 @@
         function tour_func(a){
             if (a.checked){
                 tour_info.className = '';
+
             }else{
                 tour_info.className = 'hidden';
             }
@@ -220,6 +464,25 @@
             }else{
                 train_info.className = 'hidden';
             }
+        }
+
+        function selectAll(a){
+            var parent_div = a.parentNode.parentNode;
+            var div_choices = parent_div.children[0];
+            var div_checkbox_inline_s = div_choices.children;
+
+            if(a.checked){
+                for ( var i = 0 ; i < div_checkbox_inline_s.length ; i ++){
+                    div_checkbox_inline_s[i].children[0].checked = true;
+                }
+            }else{
+                for ( var i = 0 ; i < div_checkbox_inline_s.length ; i ++){
+                    div_checkbox_inline_s[i].children[0].checked = false;
+                }
+            }
+
+
+
         }
 
 

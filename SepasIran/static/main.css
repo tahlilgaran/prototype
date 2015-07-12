@@ -1,31 +1,31 @@
 @font-face {
     font-family: 'Droid Arabic Naskh';
-    src: url('../fonts/Droid_Arabic_Naskh/DroidNaskh.eot') format('eot'),
-        url('../fonts/Droid_Arabic_Naskh/DroidNaskh.woff') format('woff'),
-        url('../fonts/Droid_Arabic_Naskh/DroidNaskh.ttf') format('truetype');
+    src: url('/static/fonts/Droid_Arabic_Naskh/DroidNaskh.eot') format('eot'),
+        url('/static/fonts/Droid_Arabic_Naskh/DroidNaskh.woff') format('woff'),
+        url('/static/fonts/Droid_Arabic_Naskh/DroidNaskh.ttf') format('truetype');
 }
 @font-face {
     font-family: 'B Yekan';
-    src: url('../fonts/BYekan/BYekan.eot') format('eot'),
-        url('../fonts/BYekan/BYekan.woff') format('woff'),
-        url('../fonts/BYekan/BYekan.ttf') format('truetype');
+    src: url('/static/fonts/BYekan/BYekan.eot') format('eot'),
+        url('/static/fonts/BYekan/BYekan.woff') format('woff'),
+        url('/static/fonts/BYekan/BYekan.ttf') format('truetype');
 }
 @font-face {
     font-family: 'B Mitra';
-    src:url('../fonts/BMitra/BMitra.eot') format('eot'),
-        url('../fonts/BMitra/BMitra.woff') format('woff'),
-        url('../fonts/BMitra/BMitra.ttf') format('truetype');
+    src:url('/static/fonts/BMitra/BMitra.eot') format('eot'),
+        url('/static/fonts/BMitra/BMitra.woff') format('woff'),
+        url('/static/fonts/BMitra/BMitra.ttf') format('truetype');
 }
 @font-face {
     font-family: 'B Mitra bold';
-    src: url('../fonts/BMitra/BMitraBold.eot') format('eot'),
-        url('../fonts/BMitra/BMitraBold.woff') format('woff'),
-        url('../fonts/BMitra/BMitraBold.ttf') format('truetype');
+    src: url('/static/fonts/BMitra/BMitraBold.eot') format('eot'),
+        url('/static/fonts/BMitra/BMitraBold.woff') format('woff'),
+        url('/static/fonts/BMitra/BMitraBold.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Rezvan-fat';
-    src:url('../fonts/Rezvan-fat.ttf') format('truetype');
+    src:url('/static/fonts/Rezvan-fat.ttf') format('truetype');
 }
 
 .rtl{
