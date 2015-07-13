@@ -17,16 +17,17 @@
                 مانده حساب شما برابر ۴۰۰۰۰ تومان می باشد.
             </span>
         {% if username == 'gardeshgar' %}
-            <div class="col-md-5">
-            <a href="/profile/tourist/gardeshgar" type="button" class="btn btn-success , col-md-12 ">مشخصات کاربری</a></br>
-            <a href="/quality/userRating" type="button" class="btn btn-info , col-md-12 ">
-            نظر سنجی
-            </a>
-            <a href="/quality/onlineComment" type="button" class="btn btn-warning , col-md-12 ">
-            نظردهی برخط
-            </a>
-            </br>
-        </div>
+            <div class="btn-group , col-md-5" role="group" aria-label="...">
+                <a href="/profile/tourist/gardeshgar" type="button" class="btn btn-danger">
+                    مشخصات کاربری
+                </a>
+                <a href="/quality/userRating" type="button" class="btn btn-success">
+                    نظرسنجی
+                </a>
+                <a href="/quality/onlineComment" type="button" class="btn btn-warning">
+                    نظردهی برخط
+                </a>
+            </div>
             {% else %}
         <div class="col-md-5">
             <a href="/profile/tourbuilder/gardeshsaz" type="button" class="btn btn-success , col-md-12 ">مشخصات کاربری</a></br>
@@ -35,12 +36,14 @@
 
         </div>
         <div class="col-md-6 ">
+        <div class="panel-danger">
 
-            <div class="box">
-                <span id="" style="font-size: 20px; color: red">
+            <div class="panel-heading">
+                <span class="panel-title" id="" style="font-size: 20px; color: red">
                     هشدار ها
                 </span>
-                <ul class="nav nav-pills nav-stacked">
+            </div>
+                <ul class="panel-body , nav nav-pills nav-stacked">
                     <li>
                         <div class="btn-group btn-group-xs" aria-label="Extra-small button group">
                             <a href="/show/tour/{{ username }}" type="button" class="btn btn-danger ,glyphicon glyphicon-record " style="color: #fff"></a></div>
@@ -56,16 +59,18 @@
                         زمان برگزاری تور باداب سورت ۱۷-۱۸ تیرماه میباشد.
                     </li>
                 </ul>
-            </div>
+        </div>
         </div>
 
-        <div class="col-md-6 , box">
+        <div class="col-md-6">
+        <div class=" panel panel-success">
 
-            <div class="dates">
-                <span id="" style="font-size: 20px;"><span class=''>&#1578;&#1740;&#1585;</span> <span class=''>&#1777;&#1779;&#1785;&#1780;</span></span>
+            <div class="panel-heading">
+                <h4 class="panel-title"><span id="" style="font-size: 20px;"><span class=''>&#1578;&#1740;&#1585;</span> <span class=''>&#1777;&#1779;&#1785;&#1780;</span></span></h4>
             </div>
 
-            <table id="" class="dayHeader , table">
+            <div class="panel-body">
+            <table id="" class="table">
                 <thead>
                 <tr>
                     <td>&#1588</td><td>&#1740</td><td>&#1583</td><td>&#1587</td><td>&#1670</td><td>&#1662</td><td>&#1580</td>
@@ -95,6 +100,9 @@
             <a id="" title="ماه بعدی" class="next" style="float: right">
                 ماه قبلی
             </a>
+            </div>
+
+        </div>
         </div>
 
 
