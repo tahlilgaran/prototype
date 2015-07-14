@@ -275,14 +275,16 @@
         <a type="button" href="/purchase/{{ kind }}/" class="btn btn-success">خرید</a>
     </div>
     {% elif username == 'gardeshsaz'%}
-       <a type="button" href="show/{{ kind }}/{{ username }}/status" class="btn btn-info">
+       <a type="button" href="show/{{ kind }}/{{ username }}/status" class="btn btn-info , col-md-3">
        وضعیت گردش
         </a>
     {% else %}
-        <div style="color: red">
+        <div class="col-md-3" style="color: red">
         برای خرید باید وارد سایت شوید.
         </div>
+
     {% endif %}
+
 
 
 {% endblock %}
